@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class Screenshots
+ * Class ScreenshotModule
  */
-class Screenshots
+class ScreenshotModule
 {
     const FILE_IDENT = 'imgfile';
     const SCREENSHOT_PACK_LIMIT = 12;

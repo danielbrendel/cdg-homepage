@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class News
+ * Class NewsModule
  */
-class News
+class NewsModule
 {
     /**
      * Query news content from Steam

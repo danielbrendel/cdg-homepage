@@ -47,7 +47,7 @@ class IndexController extends BaseController {
 	{
 		try {
 			$fromStart = $request->params()->query('from', 0);
-			$data = News::query($fromStart);
+			$data = NewsModule::query($fromStart);
 
 			return json([
 				'code' => 200,
@@ -102,7 +102,7 @@ class IndexController extends BaseController {
 		try {
 			$sorting = $request->params()->query('sorting', 'top');
 
-            $data = Screenshots::querySteamScreenshots($sorting, env('APP_SCREENSHOTLIMIT'));
+            $data = ScreenshotModule::querySteamScreenshots($sorting, env('APP_SCREENSHOTLIMIT'));
 
             return json([
 				'code' => 200,
@@ -114,6 +114,41 @@ class IndexController extends BaseController {
 				'msg' => $e->getMessage()
 			]);
 		}
+	}
+
+	/**
+	 * Handles URL: /screenshots/query
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\JsonHandler
+	 */
+	public function queryDbScreenshots($request)
+	{
+		try {
+			$from = $request->params()->query('screenIndex', null);
+
+            $data = ScreenshotModel::query($from);
+
+            return json([
+				'code' => 200,
+				'data' => (array)$data]
+			);
+		} catch (Exception $e) {
+			return json([
+				'code' => 500,
+				'msg' => $e->getMessage()
+			]);
+		}
+	}
+
+	/**
+	 * Handles URL: /cdg/uploadScreenshot
+	 */
+	public function uploadScreenshot($request)
+	{
+		ScreenshotModel::store();
+
+		exit(200);
 	}
 
 	/**
@@ -132,5 +167,37 @@ class IndexController extends BaseController {
 		return view('layout', array(array('content', 'api')), [
 			'documentation' => $markdown
 		]);
+	}
+
+	/**
+	 * Handles URL: /cronjob/{pw}
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\JsonHandler
+	 */
+	public function cronjob($request)
+	{
+		try {
+			$pw = $request->arg('pw', null);
+
+			if (!env('TWITTERBOT_ENABLE', false)) {
+                throw new Exception('Twitter Bot is deactivated', 500);
+            }
+
+            if ($pw !== env('TWITTERBOT_CRONPW')) {
+                throw new Exception('Password ' . $pw . ' is invalid', 403);
+            }
+
+			ScreenshotModel::twitterCronPost();
+
+			return json([
+				'code' => 200
+			]);
+		} catch (Exception $e) {
+			return json([
+				'code' => $e->getCode(),
+				'msg' => $e->getMessage()
+			]);
+		}
 	}
 }

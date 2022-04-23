@@ -23,7 +23,8 @@
         "phpmailer/phpmailer": "^6.1",
         "nesbot/carbon": "^2.0",
         "erusev/parsedown": "^1.7",
-        "guzzlehttp/guzzle": "^7.4"
+        "guzzlehttp/guzzle": "^7.4",
+        "abraham/twitteroauth": "^4.0"
     },
 	"scripts": {
 		"post-root-package-install": [

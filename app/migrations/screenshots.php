@@ -1,20 +1,17 @@
 <?php
 
-/*
-    Asatru PHP - Example migration
-*/
 
 /**
- * Example migration class
+ * This class specifies a migration
  */
-class Example_migration_Migration {
+class Screenshots_Migration {
     private $database = null;
     private $connection = null;
 
     /**
-     * Construct class and store PDO connection handle
+     * Store the PDO connection handle
      * 
-     * @param \PDO $pdo
+     * @param \PDO $pdo The PDO connection handle
      * @return void
      */
     public function __construct($pdo)
@@ -29,10 +26,13 @@ class Example_migration_Migration {
      */
     public function up()
     {
-        $this->database = new Asatru\Database\Migration('example_migration', $this->connection);
+        $this->database = new Asatru\Database\Migration('tbl_screenshots', $this->connection);
         $this->database->drop();
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
-        $this->database->add('text VARCHAR(260) NULL DEFAULT \'Test\'');
+        $this->database->add('screenshot VARCHAR(512) NOT NULL');
+        $this->database->add('thumb VARCHAR(512) NOT NULL');
+        $this->database->add('steamId VARCHAR(512) NOT NULL');
+        $this->database->add('posted_on_twitter BOOLEAN NOT NULL DEFAULT 0');
         $this->database->add('created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP');
         $this->database->create();
     }
@@ -44,7 +44,7 @@ class Example_migration_Migration {
      */
     public function down()
     {
-        $this->database = new Asatru\Database\Migration('example_migration', $this->connection);
-        $this->database->drop();
+        if ($this->database)
+            $this->database->drop();
     }
 }

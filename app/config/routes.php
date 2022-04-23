@@ -22,8 +22,11 @@ return [
     array('/news/query', 'GET', 'index@queryNews'),
     array('/download', 'GET', 'index@download'),
     array('/screenshots', 'GET', 'index@screenshots'),
-    array('/screenshots/query/steam', 'POST', 'index@querySteamScreenshots'),
+    array('/screenshots/query/steam', 'ANY', 'index@querySteamScreenshots'),
+    array('/screenshots/query', 'GET', 'index@queryDbScreenshots'),
+    array('/cdg/uploadScreenshot', 'POST', 'index@uploadScreenshot'),
     array('/documentation', 'GET', 'index@documentation'),
     array('/api', 'GET', 'index@api'),
+    array('/cronjob/{pw}', 'ANY', 'index@cronjob'),
     array('$404', 'ANY', 'error404@index')
 ];
