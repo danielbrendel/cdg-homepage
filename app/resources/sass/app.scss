@@ -1,0 +1,335 @@
+/*
+    app.scss
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main {
+    background-color: rgba(100, 100, 100, 0.5);
+    overflow-x: hidden;
+}
+
+a {
+    color:rgb(34, 95, 145);
+}
+
+a:hover {
+    color:rgb(34, 95, 145);
+}
+
+.code, pre {
+    background: rgb(230, 230, 230);
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+.code a {
+    color: rgb(0, 120, 255);
+}
+
+.code a:hover {
+    color: rgb(0, 120, 255);
+    text-decoration: underline;
+}
+
+.navbar-item img {
+    max-height: unset !important;
+}
+
+.navbar-brand img {
+    width: 42px;
+    height: 42px;
+}
+
+.header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-inner {
+    position: relative;
+    top: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header-content {
+    width: 100%;
+    display: inline-block;
+    @media screen and (min-width: 768px) {
+        margin-top: 74px;
+    }
+    color: rgb(220, 220, 220);
+}
+
+.header-left {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+    margin-right: 20px;
+    @media screen and (max-width: 1103px) {
+        display: none;
+    }
+}
+
+.header-right {
+    position: relative;
+    display: inline-block;
+    top: -5px;
+    width: 40%;
+    @media screen and (max-width: 1386px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 768px) {
+        width: 89%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.header-right p {
+    margin-bottom: 15px;
+}
+
+.badge-padding {
+    margin-right: 10px;
+}
+
+.content-padding {
+    @media screen and (min-width: 604px) {
+        padding-left: 135px;
+        padding-right: 74px;
+    }
+    @media screen and (max-width: 603px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.feature-cards {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.feature-card {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+    @media screen and (max-width: 1591px) {
+        width: 100%;
+    }
+    min-height: 64px;
+    vertical-align: top;
+}
+
+.feature-card-left {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    vertical-align: top;
+}
+
+.feature-card-right {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+}
+
+.other-downloads {
+    @media screen and (max-width: 768px) {
+        position: relative;
+        left: -12px;
+    }
+}
+
+.footer {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    background-color: rgb(50, 50, 50);
+    padding: 1rem 1.5rem 1rem;
+}
+
+.footer-frame {
+    width: 100%;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.news-item {
+    position: relative;
+    width: 100%;
+    min-height: 243px;
+    @media screen and (max-width: 1224px) {
+        min-height: 410px;
+    }
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 4px;
+    background-color: rgba(50, 50, 50, 0.2);
+    display: inline-block;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.news-item-title {
+    color: rgb(230, 230, 230);
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+.news-item-content {
+    color: rgb(50, 50, 50);
+    margin: 15px;
+}
+
+.news-item-footer {
+    position: absolute;
+    width: 100%;
+    margin: 15px;
+    bottom: 0;
+}
+
+.news-item-footer-date {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    color: rgb(80, 80, 80);
+}
+
+.news-item-footer-link {
+    position: relative;
+    float: right;
+    width: 16%;
+    @media screen and (max-width: 1224px) {
+        width: 43%;
+    }
+}
+
+.news-item-footer-link a:hover {
+    color: #3273dc;
+    text-decoration: underline;
+}
+
+.screen-item {
+    position: relative;
+    width: 300px;
+    max-width: 300px;
+    border: 1px solid rgb(48, 137, 188);
+    border-radius: 4px;
+    background-color: rgb(13, 19, 27);
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.screen-item-header {
+    margin: 15px;
+}
+
+.screen-item-header-avatar {
+    display: inline-block;
+}
+
+.screen-item-header-avatar img {
+    border-radius: 50%;
+}
+
+.screen-item-header-name {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    top: -10px;
+}
+
+.screen-item-footer {
+    margin: 15px;
+}
+
+.screen-item-footer-date {
+    display: inline-block;
+    color: rgb(80, 80, 80);
+}
+
+.screen-item-footer-action {
+    display: inline-block;
+}
+
+.screen-item-footer-action a:hover {
+    color: #3273dc;
+    text-decoration: underline;
+}
+
+.is-vertical-margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.is-font-title {
+    font-family: 'Ink Free', 'Shadows Into Light Two', Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.is-font-headline {
+    font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.is-pointer {
+    cursor: pointer;
+}
+
+.oldversions {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header-frame {
+    margin: 35px 15px 15px;
+}
+
+.link-underlined {
+    text-decoration: underline;
+}
+
+.is-top-5 {
+    position: relative;
+    top: 5px;
+}
