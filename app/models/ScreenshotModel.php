@@ -136,8 +136,10 @@ class ScreenshotModel extends \Asatru\Database\Model {
             }
             
             $connection = new TwitterOAuth(env('TWITTERBOT_APIKEY',), env('TWITTERBOT_APISECRET'), env('TWITTERBOT_ACCESS_TOKEN'), env('TWITTERBOT_ACCESS_TOKEN_SECRET'));  
+            $connection->setTimeouts(30, 50);
+            
             $media = $connection->upload('media/upload', ['media' => $img]);
- 
+            
             if (!isset($media->media_id_string)) {
                 throw new Exception('Failed to upload media to Twitter: ' . print_r($media, true));
             }
