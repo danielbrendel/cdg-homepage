@@ -47,7 +47,7 @@ class IndexController extends BaseController {
 	{
 		try {
 			$fromStart = $request->params()->query('from', 0);
-			$data = NewsModule::query($fromStart);
+			$data = SteamModule::queryNews($fromStart);
 
 			return json([
 				'code' => 200,
@@ -102,7 +102,7 @@ class IndexController extends BaseController {
 		try {
 			$sorting = $request->params()->query('sorting', 'top');
 
-            $data = ScreenshotModule::querySteamScreenshots($sorting, env('APP_SCREENSHOTLIMIT'));
+            $data = SteamModule::queryScreenshots($sorting, env('APP_SCREENSHOTLIMIT'));
 
             return json([
 				'code' => 200,
@@ -146,7 +146,7 @@ class IndexController extends BaseController {
 	 */
 	public function uploadScreenshot($request)
 	{
-		ScreenshotModel::store();
+		GameScreenModel::store();
 
 		exit(200);
 	}
@@ -170,12 +170,12 @@ class IndexController extends BaseController {
 	}
 
 	/**
-	 * Handles URL: /cronjob/{pw}
+	 * Handles URL: /cronjob/gamescreens/{pw}
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request
 	 * @return Asatru\View\JsonHandler
 	 */
-	public function cronjob($request)
+	public function cronjob_gamescreens($request)
 	{
 		try {
 			$pw = $request->arg('pw', null);
@@ -188,7 +188,39 @@ class IndexController extends BaseController {
                 throw new Exception('Password ' . $pw . ' is invalid', 403);
             }
 
-			ScreenshotModel::twitterCronPost();
+			GameScreenModel::twitterCronPost();
+
+			return json([
+				'code' => 200
+			]);
+		} catch (Exception $e) {
+			return json([
+				'code' => $e->getCode(),
+				'msg' => $e->getMessage()
+			]);
+		}
+	}
+
+	/**
+	 * Handles URL: /cronjob/steamscreens/{pw}
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\JsonHandler
+	 */
+	public function cronjob_steamscreens($request)
+	{
+		try {
+			$pw = $request->arg('pw', null);
+
+			if (!env('TWITTERBOT_ENABLE', false)) {
+                throw new Exception('Twitter Bot is deactivated', 500);
+            }
+
+            if ($pw !== env('TWITTERBOT_CRONPW')) {
+                throw new Exception('Password ' . $pw . ' is invalid', 403);
+            }
+
+			SteamScreenModel::acquireAndPost();
 
 			return json([
 				'code' => 200

@@ -27,6 +27,7 @@ return [
     array('/cdg/uploadScreenshot', 'POST', 'index@uploadScreenshot'),
     array('/documentation', 'GET', 'index@documentation'),
     array('/api', 'GET', 'index@api'),
-    array('/cronjob/{pw}', 'ANY', 'index@cronjob'),
+    array('/cronjob/gamescreens/{pw}', 'ANY', 'index@cronjob_gamescreens'),
+    array('/cronjob/steamscreens/{pw}', 'ANY', 'index@cronjob_steamscreens'),
     array('$404', 'ANY', 'error404@index')
 ];
