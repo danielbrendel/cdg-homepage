@@ -37,15 +37,15 @@
 
 				<div id="navbarBasicExample" class="navbar-menu">
 					<div class="navbar-end">
-						<a class="navbar-item" href="{{ url('/') }}">
+						<a class="navbar-item" href="{{ url('/') }}#content">
 							Home
 						</a>
 
-						<a class="navbar-item" href="{{ url('/news') }}">
+						<a class="navbar-item" href="{{ url('/news') }}#content">
 							News
 						</a>
 
-						<a class="navbar-item" href="{{ url('/download') }}">
+						<a class="navbar-item" href="{{ url('/download') }}#content">
 							Download
 						</a>
 
@@ -69,7 +69,7 @@
 							</div>
 						</div>
 
-						<a class="navbar-item" href="{{ url('/api') }}">
+						<a class="navbar-item" href="{{ url('/api') }}#content">
 							API
 						</a>
 					</div>

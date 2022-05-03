@@ -3,6 +3,8 @@
 
 	<div class="column is-8 is-vertical-margin">
 		<div class="content-padding">
+            <a name="content"></a>
+
 			<h2 class="is-font-headline">Download Casual Desktop Game</h2>
 
             <p>
