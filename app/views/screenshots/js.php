@@ -24,7 +24,7 @@
                 });
 
                 setTimeout(function(){
-                    location.href = window.location.origin + '/screenshots#screens-area';
+                    location.href = window.location.origin + '/screenshots#content';
                 }, 1000);
             }
         });

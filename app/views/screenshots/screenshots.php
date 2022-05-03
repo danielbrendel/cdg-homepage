@@ -3,9 +3,11 @@
 
 	<div class="column is-8 is-vertical-margin">
 		<div class="content-padding">
+			<a name="content"></a>
+
 			<h2 class="is-font-headline">View screenshots</h2>
 
-			<a name="screens-area"></a>
+			
 
 			<div class="header-frame">
 				<span><a class="link-blue" id="link-steam-screenshots-top" href="javascript:void(0);" onclick="document.getElementById('steam-screens-content').innerHTML = ''; window.querySteamScreenshots('toprated'); this.classList.add('link-underlined'); document.getElementById('link-steam-screenshots-recent').classList.remove('link-underlined');">Top</a></span>

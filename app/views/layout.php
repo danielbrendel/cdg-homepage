@@ -41,7 +41,7 @@
 							Home
 						</a>
 
-						<a class="navbar-item" href="{{ url('/news#content') }}">
+						<a class="navbar-item" href="{{ url('/news') }}">
 							News
 						</a>
 
