@@ -37,7 +37,7 @@
 
 				<div id="navbarBasicExample" class="navbar-menu">
 					<div class="navbar-end">
-						<a class="navbar-item" href="{{ url('/#content') }}">
+						<a class="navbar-item" href="{{ url('/') }}">
 							Home
 						</a>
 
@@ -45,7 +45,7 @@
 							News
 						</a>
 
-						<a class="navbar-item" href="{{ url('/download#content') }}">
+						<a class="navbar-item" href="{{ url('/download') }}">
 							Download
 						</a>
 
@@ -69,13 +69,14 @@
 							</div>
 						</div>
 
-						<a class="navbar-item" href="{{ url('/api#content') }}">
+						<a class="navbar-item" href="{{ url('/api') }}">
 							API
 						</a>
 					</div>
 				</div>
 			</nav>
 
+			@if ((isset($show_header)) && ($show_header))
 			<div class="header" style="background-image: url('{{ asset('img/header.png') }}');">
 				<div class="header-inner">
 					<div class="columns">
@@ -118,6 +119,7 @@
 					</div>
 				</div>
 			</div>
+			@endif
 
 			<div class="content">
 				{%content%}

@@ -3,8 +3,6 @@
 
 	<div class="column is-8 is-vertical-margin">
 		<div class="content-padding">
-			<a name="content"></a>
-
 			<h2 class="is-font-headline">API documentation</h2>
 
             {!! $documentation !!}

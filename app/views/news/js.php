@@ -17,10 +17,6 @@
 
                     newsContent.innerHTML += html;
                 });
-
-                setTimeout(function(){
-                    location.href = window.location.origin + '/news#content';
-                }, 1000);
             }
         });
     };

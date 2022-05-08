@@ -3,8 +3,6 @@
 
 	<div class="column is-8 is-vertical-margin">
 		<div class="content-padding">
-			<a name="content"></a>
-
 			<h2 class="is-font-headline">News from the Steam Community</h2>
 
             <div class="news-content" id="news-content">

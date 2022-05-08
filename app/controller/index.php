@@ -19,7 +19,7 @@ class IndexController extends BaseController {
 	public function index($request)
 	{
 		//Generate and return a view by using the helper
-		return view('layout', array(array('content', 'index')));
+		return view('layout', array(array('content', 'index')), ['show_header' => true]);
 	}
 
 	/**
