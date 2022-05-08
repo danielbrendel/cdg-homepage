@@ -124,6 +124,10 @@ a:hover {
     margin-right: 10px;
 }
 
+.content {
+    min-height: 799px !important;
+}
+
 .content-padding {
     @media screen and (min-width: 604px) {
         padding-left: 135px;
