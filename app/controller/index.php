@@ -106,8 +106,8 @@ class IndexController extends BaseController {
 
             return json([
 				'code' => 200,
-				'data' => (array)$data]
-			);
+				'data' => (array)$data
+			]);
 		} catch (Exception $e) {
 			return json([
 				'code' => 500,
