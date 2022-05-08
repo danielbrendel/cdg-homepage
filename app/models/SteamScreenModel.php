@@ -39,7 +39,23 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                     TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $user);
 
-                    static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$hashed]);
+                    $steam_hash = '';
+                    $hash_pos = strpos($screenData['image'], 'ugc/');
+                    if ($hash_pos !== false) {
+                        for ($i = $hash_pos + 4; $i < strlen($screenData['image']); $i++) {
+                            if (substr($screenData['image'], $i, 2) === '/?') {
+                                break;
+                            }
+
+                            $steam_hash .= substr($screenData['image'], $i, 1);
+                        }
+                    }
+
+                    if ($steam_hash === '') {
+                        $steam_hash = $screenData['image'];
+                    }
+
+                    static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$steam_hash]);
                 } else {
                     unlink(public_path() . '/img/screenshots/' . $temp_name);
                 }
@@ -66,14 +82,34 @@ class SteamScreenModel extends \Asatru\Database\Model
                     $image = HtmlParserModule::queryTagAttribute($image, 'src');
                     $steamId = HtmlParserModule::extractSteamId($html);
                     
-                    return [
-                        'image' => $image,
-                        'steamId' => $steamId
-                    ];
+                    if (!static::imageAlreadyPosted($image)) {
+                        return [
+                            'image' => $image,
+                            'steamId' => $steamId
+                        ];
+                    }
                 }
             }
 
             return null;
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
+
+    /**
+     * Check if the given image has already been posted
+     * 
+     * @param $image
+     * @return bool
+     * @throws Exception
+     */
+    public static function imageAlreadyPosted($image)
+    {
+        try {
+            $exists = SteamScreenModel::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash= ?', [$image]);
+            
+            return $exists->get(0)->get('count') > 0;
         } catch (Exception $e) {
             throw $e;
         }
