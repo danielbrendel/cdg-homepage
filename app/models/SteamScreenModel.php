@@ -39,23 +39,7 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                     TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $user);
 
-                    $steam_hash = '';
-                    $hash_pos = strpos($screenData['image'], 'ugc/');
-                    if ($hash_pos !== false) {
-                        for ($i = $hash_pos + 4; $i < strlen($screenData['image']); $i++) {
-                            if (substr($screenData['image'], $i, 2) === '/?') {
-                                break;
-                            }
-
-                            $steam_hash .= substr($screenData['image'], $i, 1);
-                        }
-                    }
-
-                    if ($steam_hash === '') {
-                        $steam_hash = $screenData['image'];
-                    }
-
-                    static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$steam_hash]);
+                    static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$screenData['hash']]);
                 } else {
                     unlink(public_path() . '/img/screenshots/' . $temp_name);
                 }
@@ -82,10 +66,27 @@ class SteamScreenModel extends \Asatru\Database\Model
                     $image = HtmlParserModule::queryTagAttribute($image, 'src');
                     $steamId = HtmlParserModule::extractSteamId($html);
                     
-                    if (!static::imageAlreadyPosted($image)) {
+                    $steam_hash = '';
+                    $hash_pos = strpos($image, 'ugc/');
+                    if ($hash_pos !== false) {
+                        for ($i = $hash_pos + 4; $i < strlen($image); $i++) {
+                            if (substr($image, $i, 2) === '/?') {
+                                break;
+                            }
+
+                            $steam_hash .= substr($image, $i, 1);
+                        }
+                    }
+
+                    if ($steam_hash === '') {
+                        $steam_hash = $image;
+                    }
+
+                    if (!static::imageAlreadyPosted($steam_hash)) {
                         return [
                             'image' => $image,
-                            'steamId' => $steamId
+                            'steamId' => $steamId,
+                            'hash' => $steam_hash
                         ];
                     }
                 }
@@ -107,7 +108,7 @@ class SteamScreenModel extends \Asatru\Database\Model
     public static function imageAlreadyPosted($image)
     {
         try {
-            $exists = SteamScreenModel::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash= ?', [$image]);
+            $exists = SteamScreenModel::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash = ?', [$image]);
             
             return $exists->get(0)->get('count') > 0;
         } catch (Exception $e) {
