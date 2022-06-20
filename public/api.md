@@ -3,7 +3,7 @@
 * HostVersion: A 16-bit value containing a version number (high and low)
 * SpriteHandle: A handle to a sprite (64 Bit)
 * SoundHandle: A handle to a sound (64 Bit)
-* DamageValue: Value containing a damage value. 0 * 255 (1 Byte)
+* DamageValue: Value containing a damage value. 0 till 255 (1 Byte)
 
 ## Enums:
 ### DamageType:
