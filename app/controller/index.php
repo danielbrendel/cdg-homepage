@@ -104,7 +104,9 @@ class IndexController extends BaseController {
 		return view('layout', array(
 			array('content', 'screenshots/screenshots'),
 			array('javascript', 'screenshots/js')
-		));
+		), [
+			'page_title' => 'Screenshots'
+		]);
 	}
 
 	/**
@@ -181,6 +183,7 @@ class IndexController extends BaseController {
 
 		//Generate and return a view by using the helper
 		return view('layout', array(array('content', 'api')), [
+			'page_title' => 'Application programming interface',
 			'documentation' => $markdown
 		]);
 	}
