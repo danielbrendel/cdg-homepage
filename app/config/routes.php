@@ -21,6 +21,7 @@ return [
     array('/news', 'GET', 'index@news'),
     array('/news/query', 'GET', 'index@queryNews'),
     array('/download', 'GET', 'index@download'),
+    array('/tools', 'GET', 'index@tools'),
     array('/screenshots', 'GET', 'index@screenshots'),
     array('/screenshots/query/steam', 'ANY', 'index@querySteamScreenshots'),
     array('/screenshots/query', 'GET', 'index@queryDbScreenshots'),

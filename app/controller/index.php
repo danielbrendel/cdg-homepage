@@ -77,6 +77,18 @@ class IndexController extends BaseController {
 	}
 
 	/**
+	 * Handles URL: /tools
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\ViewHandler
+	 */
+	public function tools($request)
+	{
+		//Generate and return a view by using the helper
+		return view('layout', array(array('content', 'tools')));
+	}
+
+	/**
 	 * Handles URL: /screenshots
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request

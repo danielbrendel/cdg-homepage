@@ -49,6 +49,10 @@
 							Download
 						</a>
 
+						<a class="navbar-item" href="{{ url('/tools') }}">
+							Tools
+						</a>
+
 						<a class="navbar-item" href="{{ url('/screenshots') }}">
 							Screenshots
 						</a>
