@@ -5,6 +5,11 @@
 		<div class="content-padding">
 			<h2 class="is-font-headline">View screenshots</h2>
 
+			<p>
+				Here you can view screenshots which are fetched from the Steam Community.
+				You can sort them by top rated and recently uploaded screenshots.
+			</p>
+
 			<div class="header-frame">
 				<span><a class="link-blue" id="link-steam-screenshots-top" href="javascript:void(0);" onclick="document.getElementById('steam-screens-content').innerHTML = ''; window.querySteamScreenshots('toprated'); this.classList.add('link-underlined'); document.getElementById('link-steam-screenshots-recent').classList.remove('link-underlined');">Top</a></span>
 				<span>|</span>
