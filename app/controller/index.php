@@ -89,7 +89,7 @@ class IndexController extends BaseController {
 	public function tools($request)
 	{
 		//Generate and return a view by using the helper
-		return view('layout', array(array('content', 'tools')));
+		return view('layout', array(array('content', 'tools')), ['page_title' => 'Official tools list']);
 	}
 
 	/**
