@@ -74,6 +74,7 @@ class IndexController extends BaseController {
 	{
 		//Generate and return a view by using the helper
 		return view('layout', array(array('content', 'download')), [
+			'page_title' => 'Download the game',
 			'versions' => [
 			]
 		]);
