@@ -33,7 +33,10 @@ class IndexController extends BaseController {
 		//Generate and return a view by using the helper
 		return view('layout', array(
 			array('content', 'news/news'), 
-			array('javascript', 'news/js'))
+			array('javascript', 'news/js')),
+			[
+				'page_title' => 'News'
+			]
 		);
 	}
 

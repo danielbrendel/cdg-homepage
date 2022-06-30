@@ -7,7 +7,12 @@
 		<meta name="description" content="Official homepage of Casual Desktop Game">
 		<meta name="tags" content="daniel brendel, cdg, casual desktop game, steam">
 		
-		<title>Casual Desktop Game</title>
+		<title>
+			Casual Desktop Game
+			@if (isset($page_title))
+				{{ ' - ' . $page_title }}
+			@endif
+		</title>
 
 		<link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/bulma.css') }}"/>
