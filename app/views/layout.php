@@ -104,7 +104,7 @@
 
 									<p>
 										Many played the Desktop Destroyer / Stress Reducer back in the days
-										and really loved it. It created so much fond memories in many peoples
+										and really loved it. It created so many fond memories in many peoples
 										childhood days. 
 									</p>
 

@@ -28,7 +28,7 @@ class TwitterModule
             }
 
             $status = isset($user->personaname) ? 'Screenshot uploaded by ' . $user->personaname : '';
-            $status .= ' ' . env('TWITTERBOT_TAGS');
+            $status .= "\n\n" . env('TWITTERBOT_TAGS');
 
             $parameters = [
                 'status' => $status,
