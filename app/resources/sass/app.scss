@@ -229,7 +229,6 @@ a.navbar-burger:hover {
     color: rgb(150, 150, 150);
 }
 
-
 .news-item {
     position: relative;
     width: 100%;
@@ -409,4 +408,20 @@ a.navbar-burger:hover {
 
 .td-no {
     color: rgb(154, 32, 32);
+}
+
+.tool-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tool-item a {
+    color: rgb(55, 55, 55);
+}
+
+.tool-item a:hover {
+    color: rgb(55, 55, 55);
+    text-decoration: underline;
 }
