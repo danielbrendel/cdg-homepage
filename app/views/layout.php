@@ -141,7 +141,7 @@
 					<div class="column is-4">
 						<div class="footer-frame">
 							<div class="footer-content">
-								&copy; {{ date('Y') }} by Daniel Brendel | <span class="is-pointer" title="Steam" onclick="window.open('https://store.steampowered.com/app/1001860/Casual_Desktop_Game/');"><i class="fab fa-steam"></i></span>&nbsp;&nbsp;&nbsp;<span class="is-pointer" title="Twitter" onclick="window.open('https://twitter.com/dbrendel_dev');"><i class="fab fa-twitter"></i></span>
+								&copy; {{ date('Y') }} by Daniel Brendel | <a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;&nbsp;&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></span>
 							</div>
 						</div>
 					</div>
