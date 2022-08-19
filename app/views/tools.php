@@ -23,49 +23,49 @@
             <div class="paragraph">
                 <h3>Officially included tools</h3>
 
-                <div class="tool-item"><a href="#aircraft">&#9679; Aircraft</a></div>
-                <div class="tool-item"><a href="#ballista">&#9679; Ballista</a></div>
-                <div class="tool-item"><a href="#bazooka">&#9679; Bazooka</a></div>
-                <div class="tool-item"><a href="#bee">&#9679; Bee</a></div>
-                <div class="tool-item"><a href="#boltwand">&#9679; Boltwand</a></div>
-                <div class="tool-item"><a href="#bomb">&#9679; Bomb</a></div>
-                <div class="tool-item"><a href="#chainsaw">&#9679; Chainsaw</a></div>
-                <div class="tool-item"><a href="#colorgun">&#9679; Colorgun</a></div>
-                <div class="tool-item"><a href="#fireworks">&#9679; Fireworks</a></div>
-                <div class="tool-item"><a href="#flamethrower">&#9679; Flamethrower</a></div>
-                <div class="tool-item"><a href="#gunner">&#9679; Gunner</a></div>
-                <div class="tool-item"><a href="#hammer">&#9679; Hammer</a></div>
-                <div class="tool-item"><a href="#headcrab">&#9679; Headcrab</a></div>
-                <div class="tool-item"><a href="#helicopter">&#9679; Helicopter</a></div>
-                <div class="tool-item"><a href="#hhg">&#9679; Holy Handgrenade</a></div>
-                <div class="tool-item"><a href="#lasergun">&#9679; Lasergun</a></div>
-                <div class="tool-item"><a href="#lasermech">&#9679; Lasermech</a></div>
-                <div class="tool-item"><a href="#meteor">&#9679; Meteorshower</a></div>
-                <div class="tool-item"><a href="#mp5">&#9679; MP5</a></div>
-                <div class="tool-item"><a href="#nuke">&#9679; Nuke</a></div>
-                <div class="tool-item"><a href="#pistol">&#9679; Pistol</a></div>
-                <div class="tool-item"><a href="#rlauncher">&#9679; Rocket launcher</a></div>
-                <div class="tool-item"><a href="#satellite">&#9679; Satellite</a></div>
-                <div class="tool-item"><a href="#sniper">&#9679; Sniper</a></div>
-                <div class="tool-item"><a href="#soldier">&#9679; Soldier</a></div>
-                <div class="tool-item"><a href="#stamp">&#9679; Stamp</a></div>
-                <div class="tool-item"><a href="#tank">&#9679; Tank</a></div>
-                <div class="tool-item"><a href="#tcdualgun">&#9679; TC Dualgun</a></div>
-                <div class="tool-item"><a href="#tcheavy">&#9679; TC Heavy</a></div>
-                <div class="tool-item"><a href="#tclight">&#9679; TC Light</a></div>
-                <div class="tool-item"><a href="#teslatower">&#9679; Teslatower</a></div>
-                <div class="tool-item"><a href="#wand">&#9679; Wand</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#aircraft">Aircraft</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#ballista">Ballista</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#bazooka">Bazooka</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#bee">Bee</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#boltwand">Boltwand</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#bomb">Bomb</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#chainsaw">Chainsaw</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#colorgun">Colorgun</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#fireworks">Fireworks</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#flamethrower">Flamethrower</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#gunner">Gunner</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#hammer">Hammer</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#headcrab">Headcrab</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#helicopter">Helicopter</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#hhg">Holy Handgrenade</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#lasergun">Lasergun</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#lasermech">Lasermech</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#meteor">Meteorshower</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#mp5">MP5</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#nuke">Nuke</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#pistol">Pistol</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#rlauncher">Rocket launcher</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#satellite">Satellite</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#sniper">&Sniper</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#soldier">Soldier</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#stamp">Stamp</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#tank">Tank</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#tcdualgun">TC Dualgun</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#tcheavy">TC Heavy</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#tclight">TC Light</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#teslatower">Teslatower</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#wand">Wand</a></div>
             </div>
 
             <div class="paragraph">
                 <h3>Official Workshop tools</h3>
 
-                <div class="tool-item"><a href="#alienfighter">&#9679; Alien Fighter</a></div>
-                <div class="tool-item"><a href="#aliengiant">&#9679; Alien Giant</a></div>
-                <div class="tool-item"><a href="#alieninfantry">&#9679; Alien Infantry</a></div>
-                <div class="tool-item"><a href="#frogator">&#9679; Frogator</a></div>
-                <div class="tool-item"><a href="#sidelaser">&#9679; Sidelaser</a></div>
-                <div class="tool-item"><a href="#wolfdragon">&#9679; Wolfdragon</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#alienfighter">Alien Fighter</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#aliengiant">Alien Giant</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#alieninfantry">Alien Infantry</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#frogator">Frogator</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#sidelaser">Sidelaser</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#wolfdragon">Wolfdragon</a></div>
             </div>
 
             <div class="paragraph">

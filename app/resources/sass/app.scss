@@ -218,6 +218,7 @@ a.navbar-burger:hover {
 }
 
 .footer-content {
+    margin-top: 19px;
     text-align: center;
 }
 
@@ -422,10 +423,18 @@ a.navbar-burger:hover {
 }
 
 .tool-item a {
-    color: rgb(55, 55, 55);
+    color: rgb(34, 95, 145);
 }
 
 .tool-item a:hover {
-    color: rgb(55, 55, 55);
+    color: rgb(34, 95, 145);
     text-decoration: underline;
+}
+
+.tool-item span {
+    @media screen and (max-width: 1089px) {
+        position: relative;
+        top: -3px;
+        font-size: 0.55em;
+    }
 }
