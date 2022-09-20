@@ -64,6 +64,7 @@
                 <div class="tool-item"><span>&#9679;</span> <a href="#aliengiant">Alien Giant</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#alieninfantry">Alien Infantry</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#frogator">Frogator</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#mine">Mine</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#sidelaser">Sidelaser</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#wolfdragon">Wolfdragon</a></div>
             </div>
@@ -1394,6 +1395,42 @@
                             <tr class="tr-colored">
                                 <td><strong>Type</strong></td>
                                 <td>Monster</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Spawnable</strong></td>
+                                <td class="td-yes">Yes</td>
+                            </tr>
+
+                            <tr class="tr-colored">
+                                <td><strong>Movable</strong></td>
+                                <td class="td-no">No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr/>
+                </div>
+
+                <a name="mine"></a>
+                <div class="paragraph">
+                    <h4>Mine</h4>
+
+                    <p>
+                        <img src="{{ asset('img/previews/mine.png') }}"/>
+                    </p>
+
+                    <p>The mine will be activated if an entity comes too close and will then detonate after a few moments</p>
+
+                    <table>
+                        <thead>
+                            <tr></tr>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr-colored">
+                                <td><strong>Type</strong></td>
+                                <td>Weapon</td>
                             </tr>
 
                             <tr>
