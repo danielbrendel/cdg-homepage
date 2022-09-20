@@ -46,7 +46,7 @@
                 <div class="tool-item"><span>&#9679;</span> <a href="#pistol">Pistol</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#rlauncher">Rocket launcher</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#satellite">Satellite</a></div>
-                <div class="tool-item"><span>&#9679;</span> <a href="#sniper">&Sniper</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#sniper">Sniper</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#soldier">Soldier</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#stamp">Stamp</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#tank">Tank</a></div>
