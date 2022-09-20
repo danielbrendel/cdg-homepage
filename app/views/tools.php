@@ -65,6 +65,7 @@
                 <div class="tool-item"><span>&#9679;</span> <a href="#alieninfantry">Alien Infantry</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#frogator">Frogator</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#mine">Mine</a></div>
+                <div class="tool-item"><span>&#9679;</span> <a href="#shotgun">Shotgun</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#sidelaser">Sidelaser</a></div>
                 <div class="tool-item"><span>&#9679;</span> <a href="#wolfdragon">Wolfdragon</a></div>
             </div>
@@ -1441,6 +1442,42 @@
                             <tr class="tr-colored">
                                 <td><strong>Movable</strong></td>
                                 <td class="td-no">No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr/>
+                </div>
+
+                <a name="shotgun"></a>
+                <div class="paragraph">
+                    <h4>Shotgun</h4>
+
+                    <p>
+                        <img src="{{ asset('img/previews/shotgun.png') }}"/>
+                    </p>
+
+                    <p>The shotgun is a weapon that fires multiple bullets and causes much damage</p>
+
+                    <table>
+                        <thead>
+                            <tr></tr>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr-colored">
+                                <td><strong>Type</strong></td>
+                                <td>Weapon</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Spawnable</strong></td>
+                                <td class="td-no">No</td>
+                            </tr>
+
+                            <tr class="tr-colored">
+                                <td><strong>Movable</strong></td>
+                                <td>-</td>
                             </tr>
                         </tbody>
                     </table>
