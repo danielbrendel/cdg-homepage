@@ -1493,7 +1493,7 @@
                         <img src="{{ asset('img/previews/sidelaser.png') }}"/>
                     </p>
 
-                    <p>When spawned a sidelaser on left and right of the screen moves from up to down and shoots lasers a few times</p>
+                    <p>When launched a sidelaser on left and right of the screen moves from up to down and shoots lasers a few times</p>
 
                     <table>
                         <thead>
