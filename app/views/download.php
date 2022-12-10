@@ -98,6 +98,20 @@
                     The system requirements are the same as mentioned above in the Steam section.
                 </p>
             @endif
+
+            <hr/>
+
+            <p>Official Workshop items</p>
+
+            <div class="workshop-items">
+                @foreach ($workshop_items as $item)
+                    <div class="workshop-item">
+                        <steam-workshop itemid="{{ $item }}" show-image="0"></steam-workshop>
+                    </div>
+                @endforeach
+            </div>
+
+            <p>Visit the <a href="https://steamcommunity.com/app/1001860/workshop/">Steam Workshop</a> for more community content</p>
 		</div>
 	</div>
 

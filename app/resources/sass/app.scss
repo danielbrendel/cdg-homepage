@@ -441,3 +441,23 @@ a.navbar-burger:hover {
         font-size: 0.55em;
     }
 }
+
+.workshop-items {
+
+}
+
+.workshop-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.steam-workshop {
+    min-width: 330px !important;
+    max-width: 330px !important;
+}
+
+.steam-workshop-info-footer-author {
+    width: 59% !important;
+}

@@ -11,6 +11,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 import 'steamwidgets/steam_app';
 import 'steamwidgets/steam_group';
+import 'steamwidgets/steam_workshop';
 
 window.vue = new Vue({
     el: '#main',

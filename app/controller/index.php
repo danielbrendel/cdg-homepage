@@ -76,7 +76,8 @@ class IndexController extends BaseController {
 		return view('layout', array(array('content', 'download')), [
 			'page_title' => 'Download the game',
 			'versions' => [
-			]
+			],
+			'workshop_items' => config('workshop_items')
 		]);
 	}
 
