@@ -92,9 +92,17 @@
 				</div>
 			</div>
 
+			<hr/>
+
 			<p>
-				<img src="{{ asset('img/steam_shop.png') }}" alt="Code"/>
+				Join the Desktop Destroyer Fan Group:
 			</p>
+
+			<p>
+				<steam-group group="desktop-destroyer-fan-group"></steam-group>
+			</p>
+
+			<hr/>
 
 			<p>
 				If you have any questions, please create a discussion in the <a href="https://steamcommunity.com/app/1001860/discussions/">Steam forums</a>.
