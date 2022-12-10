@@ -94,7 +94,7 @@
 						<div class="column is-8">
 							<div class="header-content">
 								<div class="header-left">
-									<img src="{{ asset('img/header_image.png') }}" alt="Steam"/>
+									<steam-app appid="1001860" rating="1" author="{{ env('APP_WIDGET_AUTHOR') }}" style-border="small"></steam-app>
 								</div>
 
 								<div class="header-right">
@@ -113,6 +113,10 @@
 										in a new and modern shape - which means downloadable community content and
 										other community features. Thus the game is freely available to download and
 										play via Steam. 
+									</p>
+
+									<p>
+										Casual Desktop Game features AngelScript to create tools/entities.
 									</p>
 
 									<div>

@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "steamwidgets": "^1.0.4",
     "style-loader": "^1.2.1"
   }
 }

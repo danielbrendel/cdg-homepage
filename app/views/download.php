@@ -8,8 +8,8 @@
             <p>
                 @if (env('APP_SHOWSTANDALONEDL'))
                     Casual Desktop Game is available via <a class="is-link" href="https://store.steampowered.com/">Steam</a>
-                    or via <a class="is-link" href="#standalone">Standalone download</a>. <br/> When using Steam you have downloaded and installed 
-                    Steam from the official homepage.
+                    or via <a class="is-link" href="#standalone">Standalone download</a>. <br/> When using Steam you have to first 
+                    download and install Steam from the official homepage.
                 @else
                     Casual Desktop Game is available via <a class="is-link" href="https://store.steampowered.com/">Steam</a>.
                     Therefore first download Steam from the official homepage.

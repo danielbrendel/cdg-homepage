@@ -110,7 +110,7 @@ a.navbar-burger:hover {
     width: 100%;
     display: inline-block;
     @media screen and (min-width: 768px) {
-        margin-top: 74px;
+        margin-top: 25px;
     }
     color: rgb(220, 220, 220);
 }
@@ -119,7 +119,6 @@ a.navbar-burger:hover {
     position: relative;
     display: inline-block;
     width: 45%;
-    text-align: right;
     margin-right: 20px;
     @media screen and (max-width: 1103px) {
         display: none;
@@ -129,7 +128,7 @@ a.navbar-burger:hover {
 .header-right {
     position: relative;
     display: inline-block;
-    top: -5px;
+    top: -8px;
     width: 40%;
     @media screen and (max-width: 1386px) {
         width: 50%;
@@ -143,6 +142,10 @@ a.navbar-burger:hover {
 
 .header-right p {
     margin-bottom: 15px;
+}
+
+.steam-app {
+    float: right;
 }
 
 .badge-padding {
