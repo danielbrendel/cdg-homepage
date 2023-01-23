@@ -99,7 +99,7 @@
 			</p>
 
 			<p>
-				<steam-group group="desktop-destroyer-fan-group"></steam-group>
+				<steam-group group="desktop-destroyer-fan-group" style-border="small"></steam-group>
 			</p>
 
 			<hr/>
