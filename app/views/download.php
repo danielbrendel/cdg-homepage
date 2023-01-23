@@ -106,7 +106,7 @@
             <div class="workshop-items">
                 @foreach ($workshop_items as $item)
                     <div class="workshop-item">
-                        <steam-workshop itemid="{{ $item }}" show-image="0"></steam-workshop>
+                        <steam-workshop itemid="{{ $item }}" show-image="0" style-border="small"></steam-workshop>
                     </div>
                 @endforeach
             </div>
