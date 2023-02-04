@@ -461,3 +461,43 @@ a.navbar-burger:hover {
 .steam-workshop-info-footer-author {
     width: 59% !important;
 }
+
+.reviews {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.review {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 286px;
+    height: 310px;
+    background-color: #c0c4c6;
+    color: rgb(100, 100, 100);
+    border-radius: 5px;
+    font-style: italic;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.review:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.review-content {
+    padding: 20px;
+    height: 80%;
+}
+
+.review-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.review-footer i {
+    color: #48973d;
+}

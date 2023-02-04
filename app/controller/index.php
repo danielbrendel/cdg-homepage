@@ -19,7 +19,10 @@ class IndexController extends BaseController {
 	public function index($request)
 	{
 		//Generate and return a view by using the helper
-		return view('layout', array(array('content', 'index')), ['show_header' => true]);
+		return view('layout', array(array('content', 'index')), [
+			'show_header' => true,
+			'reviews' => ReviewsModel::getAllReviews()
+		]);
 	}
 
 	/**

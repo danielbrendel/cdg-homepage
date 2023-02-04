@@ -94,6 +94,26 @@
 
 			<hr/>
 
+			@if (count($reviews) > 0)
+				<div class="reviews">
+					<h2>Why players love the game</h2>
+
+					@foreach ($reviews as $review)
+						<div class="review">
+							<div class="review-content">
+								&quot;{!! str_replace("\r\n", "<br/>", $review->get('content')) !!}&quot;
+							</div>
+
+							<div class="review-footer">
+								<i class="fas fa-thumbs-up"></i>&nbsp;<a href="{{ $review->get('url') }}">{{ $review->get('type') }}</a>
+							</div>
+						</div>
+					@endforeach
+				</div>
+
+				<hr/>
+			@endif
+
 			<p>
 				Join the Desktop Destroyer Fan Group:
 			</p>
