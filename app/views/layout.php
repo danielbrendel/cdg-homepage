@@ -163,8 +163,21 @@
 		<script src="{{ asset('js/app.js') }}"></script>
 		<div class="is-hidden">{%javascript%}</div>
 		<script>
+			window.waitDescLoad = null;
+
+			window.checkDescLoad = function() {
+				let elDesc = document.getElementsByClassName('steam-app-description');
+				if ((elDesc) && (elDesc.length > 0)) {
+					elDesc[0].innerHTML = elDesc[0].innerHTML.trim().substring(0, 102) + '...';
+
+					clearInterval(window.waitDescLoad);
+				}
+			};
+
 			document.addEventListener('DOMContentLoaded', function(){
 				window.vue.initNavbar();
+
+				window.waitDescLoad = setInterval(window.checkDescLoad, 250);
 			});
 		</script>
 	</body>

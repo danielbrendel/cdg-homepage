@@ -148,6 +148,18 @@ a.navbar-burger:hover {
     float: right;
 }
 
+.steam-group {
+    @media screen and (max-width: 380px) {
+        width: 322px !important;
+    }
+}
+
+.steam-group-preview {
+    @media screen and (max-width: 380px) {
+        width: 322px !important;
+    }
+}
+
 .badge-padding {
     margin-right: 10px;
 }
