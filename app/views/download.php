@@ -65,33 +65,17 @@
                     This way you can run the game as a portable application without an installation or binding to a DRM system.
                 </p>
 
-                <div class="is-inline-block">
-                    <a class="button is-info" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '.zip') }}">Download version {{ env('APP_STANDALONEDLVER') }}</a>
-                </div>
-
-                @if (count($versions) > 0)
-                <div class="is-inline-block">
-                    <a href="javascript:void(0);" onclick="document.getElementById('oldversions').classList.remove('is-hidden');">Show older versions</a>
-                </div>
-                @endif
-
-                <div id="oldversions" class="oldversions is-hidden">
-                    <code class="code">
-                        @foreach ($versions as $version)
-                            <a href="{{ asset('downloads/cdg_v' . $version . '.zip') }}">{{ 'Casual Desktop Game x64 v' . $version }}</a><br/>
-                        @endforeach
-                    </code>
-                </div>
+                <p>
+                    <span class="is-inline-block"><a class="button is-info" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '_installer.msi') }}">Download</a></span><span class="is-inline-block dl-ident-top">&nbsp;Casual Desktop Game v{{ env('APP_STANDALONEDLVER') }} <strong>Setup</strong>&nbsp;<i class="fab fa-windows"></i></span>
+                </p>
 
                 <p>
-                    Usage instructions:<br/>
+                    <span class="is-inline-block"><a class="button is-info" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '.zip') }}">Download</a></span><span class="is-inline-block dl-ident-top">&nbsp;Casual Desktop Game v{{ env('APP_STANDALONEDLVER') }} <strong>Portable</strong>&nbsp;<i class="fab fa-windows"></i></span>
+                </p>
 
-                    <ul>
-                        <li>Download the prefered version of Casual Desktop Game</li>
-                        <li>Extract the ZIP archive in a directory of your choice</li>
-                        <li>Run dnyCasualDeskGame.exe to play the game</li>
-                        <li>If desired you can place a shortcut to the game on your Desktop</li>
-                    </ul>
+                <p>
+                    Setup version of the game will install the standalone version to your system and register it with the installed applications.
+                    When using the portable version you can just extract the archive anywhere and directly launch the game.
                 </p>
 
                 <p>
