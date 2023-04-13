@@ -251,17 +251,24 @@ a.navbar-burger:hover {
 
 .news-item {
     position: relative;
-    width: 100%;
-    min-height: 243px;
-    @media screen and (max-width: 1224px) {
-        min-height: 410px;
+    width: 265px;
+    min-height: 435px;
+    @media screen and (max-width: 598px) {
+        width: 95%;
     }
     border: 1px solid rgb(100, 100, 100);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 4px;
     background-color: rgba(50, 50, 50, 0.2);
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
     vertical-align: middle;
+}
+
+.news-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .news-item-title {
@@ -285,17 +292,14 @@ a.navbar-burger:hover {
 .news-item-footer-date {
     position: relative;
     display: inline-block;
-    width: 50%;
+    width: 45%;
     color: rgb(80, 80, 80);
 }
 
 .news-item-footer-link {
     position: relative;
     float: right;
-    width: 16%;
-    @media screen and (max-width: 1224px) {
-        width: 43%;
-    }
+    width: 55%;
 }
 
 .news-item-footer-link a:hover {
