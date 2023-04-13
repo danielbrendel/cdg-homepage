@@ -17,7 +17,7 @@
 
             <p>
                 This page gives information about all the official standard tools, both officially included and 
-                official Steam Workshop tools.
+                official Workshop tools.
             </p>
 
             <div class="paragraph">
