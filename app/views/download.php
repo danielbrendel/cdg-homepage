@@ -61,8 +61,11 @@
                 <h2>Standalone version</h2>
 
                 <p>
-                    You can also download Casual Desktop Game as a standalone application.<br/>
-                    This way you can run the game as a portable application without an installation or binding to a DRM system.
+                    You can also download Casual Desktop Game as a standalone application. 
+                    There is both a setup as well as a portable version available.
+                    The setup is recommended for a permanent installation and the portable version 
+                    is recommended for temporary usages. The setup does also install all the
+                    neccessary dependencies.
                 </p>
 
                 <p>
