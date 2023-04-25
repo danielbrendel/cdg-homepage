@@ -178,6 +178,25 @@
 				window.vue.initNavbar();
 
 				window.waitDescLoad = setInterval(window.checkDescLoad, 250);
+
+				const obsoptions = {
+					root: null,
+					rootMargin: '0px',
+					threshold: 0.7
+				};
+
+				const obscallback = function(entries, observer) {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.replace('fade-out', 'fade-in');
+						}
+					});
+				};
+
+				const observer = new IntersectionObserver(obscallback, obsoptions);
+
+				let fadeElems = document.querySelectorAll('.fade');
+				fadeElems.forEach(elem => observer.observe(elem));
 			});
 		</script>
 	</body>

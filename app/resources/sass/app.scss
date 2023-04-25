@@ -180,38 +180,35 @@ a.navbar-burger:hover {
 }
 
 .feature-cards {
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
 }
 
 .feature-card {
     position: relative;
     display: inline-block;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 45%;
-    @media screen and (max-width: 1591px) {
-        width: 100%;
-    }
-    min-height: 64px;
-    vertical-align: top;
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 12px;
+    border-left: 3px solid rgb(105, 105, 105);
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1.2em;
+    text-align: center;
 }
 
-.feature-card-left {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    vertical-align: top;
+.feature-card-icon {
+    padding-bottom: 5px;
 }
 
-.feature-card-right {
-    position: relative;
-    display: inline-block;
-    width: 90%;
+.feature-card-info {
+    padding-top: 5px;
 }
 
 .other-downloads {
@@ -479,7 +476,7 @@ a.navbar-burger:hover {
 }
 
 .reviews {
-    margin-top: 20px;
+    margin-top: 45px;
     margin-bottom: 20px;
 }
 
@@ -496,6 +493,7 @@ a.navbar-burger:hover {
     border-radius: 5px;
     font-style: italic;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 .review:hover {
@@ -508,10 +506,17 @@ a.navbar-burger:hover {
 }
 
 .review-footer {
+    position: relative;
+    top: -5px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     font-size: 1.5em;
+    background-color: rgb(220, 220, 220);
 }
 
 .review-footer i {
@@ -521,4 +526,30 @@ a.navbar-burger:hover {
 .dl-ident-top {
     position: relative;
     top: 4px;
+}
+
+.fade {
+    transition: opacity 0.65s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.is-centered {
+    text-align: center;
+}
+
+.steam-group-padding {
+    @media screen and (min-width: 768px) {
+        padding-left: 55px;
+    }
+}
+
+.steam-group-margin-top {
+    margin-top: 45px;
 }
