@@ -182,7 +182,7 @@
 				const obsoptions = {
 					root: null,
 					rootMargin: '0px',
-					threshold: 0.7
+					threshold: 0.2
 				};
 
 				const obscallback = function(entries, observer) {
