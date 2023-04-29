@@ -1,6 +1,6 @@
 /app/logs
-/app/db
 /vendor
 /node_modules
+/.idea
 .env
 .phpunit.result.cache
