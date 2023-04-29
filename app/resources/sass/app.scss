@@ -189,6 +189,9 @@ a.navbar-burger:hover {
     position: relative;
     display: inline-block;
     width: 150px;
+    @media screen and (max-width: 768px) {
+        width: 250px;
+    }
     height: 150px;
     margin-left: 5px;
     margin-right: 5px;
