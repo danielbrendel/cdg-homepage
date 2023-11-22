@@ -1,39 +1,136 @@
-/*
+/**
     app.scss
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 html, body {
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    background-color: rgb(30, 30, 30);
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
+    color: rgb(67, 225, 92);
+    font-family: VT323, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
 }
 
-#main {
-    background-color: rgba(100, 100, 100, 0.5);
-    overflow-x: hidden;
+.is-font-title {
+    font-family: 'Ink Free', 'Shadows Into Light Two', Verdana, Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(67, 225, 92) !important;
 }
 
-a {
-    color:rgb(34, 95, 145);
+.is-vertical-spacing {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-a:hover {
-    color:rgb(34, 95, 145);
+.is-centered {
+    text-align: center;
+}
+
+.is-centered-mobile {
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.is-fixed-horizont {
+    @media screen and (min-width: 769px) {
+        transform: translate(-10%, -0%);
+    }
+}
+
+.is-top-5 {
+    position: relative;
+    top: 5px;
+}
+
+.is-mobile-side-padding {
+    @media screen and (max-width: 768px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.paragraph {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.page {
+    padding-top: 90px;
+    @media screen and (max-width: 768px) {
+        padding-top: 50px;
+    }
+    padding-bottom: 63px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.5714em;
+}
+
+.page p {
+    color: rgba(67, 225, 92, 0.5) !important;
+}
+
+.page a {
+    color: #3273dc;
+}
+
+.page a:hover {
+    color: #3273dc;
+    text-decoration: underline;
+}
+
+.page ul {
+    list-style: none;
+}
+
+.page ul li::before {
+    content: "\25CF";
+    margin-left: 20px;
+    font-weight: bold;
+    display: inline-block; 
+    width: 20px;
+    color: rgb(150, 150, 150);
+}
+
+.page strong {
+    color: rgba(167, 212, 154, 0.76) !important;
+    font-weight: bold;
+}
+
+.page table {
+    width: 100%;
+}
+
+.page tr {
+    border: 1px solid #ccc;
+}
+
+.page td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.page h4 {
+    font-size: 1.3em;
 }
 
 .code, pre {
-    background: rgb(230, 230, 230);
+    background: rgba(0, 0, 0, 0.5);
     border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
+    border-left: 3px solid rgb(73, 243, 51);
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
@@ -55,128 +152,117 @@ a:hover {
     text-decoration: underline;
 }
 
-.navbar-item img {
-    max-height: unset !important;
+.fade {
+    transition: opacity 0.65s ease-in;
 }
 
-.navbar-brand img {
-    width: 42px;
-    height: 42px;
+.fade-in {
+    opacity: 1;
 }
 
-.navbar {
-    background-color: rgba(255, 255, 255, 0.0);
+.fade-out {
+    opacity: 0;
 }
-a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-    background-color: rgba(255, 255, 255, 0.0) !important;
-    color: rgb(180, 180, 180) !important;
+
+.button-long {
+    padding-left: 55px;
+    padding-right: 55px;
 }
-.navbar-item, .navbar-burger, .navbar-link {
-    color: rgb(190, 190, 190);
+
+.navbar-brand {
+    background-color: rgb(50, 50, 50);
 }
+
+.navbar-burger {
+    margin-left: 20px;
+}
+
+.navbar-item-brand:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.navbar.is-dark .navbar-brand > a.navbar-item:hover, .navbar.is-dark .navbar-brand > a.navbar-item.is-active, .navbar.is-dark .navbar-brand .navbar-link:hover, .navbar.is-dark .navbar-brand .navbar-link.is-active {
+    background-color: rgb(50, 50, 50);
+}
+
+.navbar-item, .navbar-link {
+    color: rgb(67, 225, 92) !important;
+}
+
 .navbar-dropdown {
-    background-color: rgb(50, 50, 48);
+    background-color: rgb(50, 50, 50);
+    border-top: unset;
 }
-.navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: rgba(0, 0, 0, 0.0);
+
+.navbar-menu {
+    background-color: rgb(50, 50, 50);
 }
-@media screen and (max-width: 1087px) {
-    .navbar-menu {
-        background-color: rgb(50, 50, 48);
-    }
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: rgb(41, 41, 41);
 }
-a.navbar-burger:hover {
-    color: rgb(200, 200, 200);
+
+.navbar-dropdown a.navbar-item:hover {
+    background-color: rgb(41, 41, 41);
 }
 
 .header {
     position: relative;
-    display: inline-block;
     width: 100%;
-    height: 500px;
-    background-size: cover;
+    height: 610px;
+    margin-top: 52px;
+    background-color: rgb(50, 103, 172);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.header-inner {
+.header-overlay {
     position: relative;
-    top: 12px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.76);
 }
 
 .header-content {
-    width: 100%;
-    display: inline-block;
-    @media screen and (min-width: 768px) {
-        margin-top: 25px;
-    }
-    color: rgb(220, 220, 220);
-}
-
-.header-left {
     position: relative;
-    display: inline-block;
-    width: 45%;
-    margin-right: 20px;
-    @media screen and (max-width: 1103px) {
-        display: none;
-    }
+    top: 50%;
+    transform: translate(-0%, -50%);
+    text-align: center;
 }
 
-.header-right {
-    position: relative;
-    display: inline-block;
-    top: -8px;
-    width: 40%;
-    @media screen and (max-width: 1386px) {
-        width: 50%;
-    }
-    @media screen and (max-width: 768px) {
-        width: 89%;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+.header-content iframe.is-video {
+    width: 500px;
+    height: 350px;
 }
 
-.header-right p {
-    margin-bottom: 15px;
-}
-
-.steam-app {
-    float: right;
-}
-
-.steam-group {
-    @media screen and (max-width: 380px) {
-        width: 322px !important;
-    }
-}
-
-.steam-group-preview {
-    @media screen and (max-width: 380px) {
-        width: 322px !important;
-    }
-}
-
-.badge-padding {
-    margin-right: 10px;
+.header h1 {
+    font-family: VT323, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.4em;
+    color: rgb(67, 225, 92);
+    background: transparent;
+    text-shadow:
+        -1px -1px 0 #ccc,
+        0   -1px 0 #ccc,
+        1px -1px 0 #000,
+        1px  0   0 #000,
+        1px  1px 0 #000,
+        0    1px 0 #000,
+        -1px  1px 0 #000,
+        -1px  0   0 #000;
 }
 
 .content {
-    min-height: 799px !important;
+    color: rgb(67, 225, 92);
+    background-color: rgb(30, 30, 30);
+    font-size: 1.2em;
+    padding-top: 40px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px !important;
 }
 
-.content-padding {
-    @media screen and (min-width: 604px) {
-        padding-left: 135px;
-        padding-right: 74px;
-    }
-    @media screen and (max-width: 603px) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+.content h2 {
+    color: rgb(67, 225, 92);
 }
 
 .feature-cards {
@@ -198,11 +284,12 @@ a.navbar-burger:hover {
     margin-bottom: 15px;
     padding-top: 25px;
     padding-bottom: 50px;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(50, 50, 50);
+    color: rgb(120, 120, 120);
     border-radius: 12px;
-    border-left: 3px solid rgb(105, 105, 105);
+    border-left: 3px solid #316d3b;
     box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-align: center;
 }
 
@@ -214,35 +301,81 @@ a.navbar-burger:hover {
     padding-top: 5px;
 }
 
-.other-downloads {
-    @media screen and (max-width: 768px) {
-        position: relative;
-        left: -12px;
-    }
-}
-
-.footer {
+.downloads {
+    position: relative;
     width: 100%;
-    color: rgb(150, 150, 150);
+    height: auto;
     background-color: rgb(50, 50, 50);
-    padding: 1rem 1.5rem 1rem;
+    font-size: 1.2em;
+    padding-top: 40px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px !important;
 }
 
-.footer-frame {
+.downloads h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.5714em;
+}
+
+div.tbl-downloads {
+    overflow-x: auto;
+}
+
+.tbl-downloads table {
     width: 100%;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
-.footer-content {
-    margin-top: 19px;
-    text-align: center;
+.tbl-downloads thead, .tbl-downloads thead td {
+    background-color: rgb(91, 103, 115);
+    color: rgb(200, 200, 200) !important;
 }
 
-.footer-content a {
-    color: rgb(150, 150, 150);
+.tbl-downloads tbody {
+    color: rgb(195, 195, 195);
+    border: 1px solid #ccc;
 }
 
-.footer-content a:hover {
-    color: rgb(150, 150, 150);
+.tbl-downloads tbody strong {
+    color: rgb(195, 195, 195);
+}
+
+.tbl-downloads td {
+    border: 1px solid #ccc !important;
+    padding: 0.5em 0.75em;
+}
+
+.tbl-downloads tbody td {
+    vertical-align: middle;
+}
+
+.screenshots {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgb(30, 30, 30);
+    font-size: 1.2em;
+    padding-top: 40px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 150px !important;
+}
+
+.screenshots h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.5714em;
+}
+
+.screenshot {
+    position: relative;
+    display: inline-block;
+    width: 329px;
+}
+
+.screenshot img:hover {
+    border: 1px solid rgb(15, 132, 15);
 }
 
 .news-content {
@@ -251,7 +384,7 @@ a.navbar-burger:hover {
 
 .news-item {
     position: relative;
-    width: 265px;
+    width: 385px;
     min-height: 435px;
     @media screen and (max-width: 598px) {
         width: 95%;
@@ -272,13 +405,13 @@ a.navbar-burger:hover {
 }
 
 .news-item-title {
-    color: rgb(230, 230, 230);
+    color: rgb(67, 225, 92);
     font-size: 1.5em;
     margin: 15px;
 }
 
 .news-item-content {
-    color: rgb(50, 50, 50);
+    color: rgba(67, 225, 92, 0.5);
     margin: 15px;
 }
 
@@ -307,18 +440,60 @@ a.navbar-burger:hover {
     text-decoration: underline;
 }
 
+.tr-colored {
+    background-color: rgb(50, 50, 50);
+}
+
+.td-yes {
+    color: rgb(15, 132, 15);
+}
+
+.td-no {
+    color: rgb(154, 32, 32);
+}
+
+.tool-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tool-item span {
+    color: rgb(150, 150, 150);
+}
+
+.tool-item a {
+    color: rgb(34, 95, 145);
+}
+
+.tool-item a:hover {
+    color: rgb(34, 95, 145);
+    text-decoration: underline;
+}
+
+.tool-item span {
+    @media screen and (max-width: 1089px) {
+        position: relative;
+        top: -3px;
+        font-size: 0.55em;
+    }
+}
+
 .screen-item {
     position: relative;
+    display: inline-block;
     width: 300px;
     max-width: 300px;
-    border: 1px solid rgb(48, 137, 188);
     border-radius: 4px;
-    background-color: rgb(13, 19, 27);
-    display: inline-block;
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     vertical-align: middle;
+}
+
+.screen-item img:hover {
+    border: 1px solid rgb(15, 132, 15);
 }
 
 .screen-item-header {
@@ -358,56 +533,10 @@ a.navbar-burger:hover {
     text-decoration: underline;
 }
 
-.is-vertical-margin {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.is-font-title {
-    font-family: 'Ink Free', 'Shadows Into Light Two', Verdana, Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.is-font-headline {
-    font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.is-pointer {
-    cursor: pointer;
-}
-
-.is-headline-margin-bottom {
-    margin-bottom: 50px !important;
-}
-
-.oldversions {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.header-frame {
-    margin: 35px 15px 15px;
-}
-
-.link-underlined {
-    text-decoration: underline;
-}
-
-.is-top-5 {
-    position: relative;
-    top: 5px;
-}
-
-.paragraph {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
 .scroll-to-top {
     position: fixed;
     z-index: 3;
-    bottom: 12px;
+    bottom: 64px;
     right: 12px;
 }
 
@@ -422,137 +551,31 @@ a.navbar-burger:hover {
     color: rgb(200, 200, 200);
 }
 
-.tr-colored {
-    background-color: rgb(150, 150, 150);
+.scroll-to-top-inner a:hover {
+    color: rgb(230, 230, 230);
 }
 
-.td-yes {
-    color: rgb(15, 132, 15);
-}
-
-.td-no {
-    color: rgb(154, 32, 32);
-}
-
-.tool-item {
+.footer {
     position: relative;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    color: rgba(67, 225, 92, 0.76);
+    background-color: rgb(67, 67, 67);
 }
 
-.tool-item a {
-    color: rgb(34, 95, 145);
-}
-
-.tool-item a:hover {
-    color: rgb(34, 95, 145);
-    text-decoration: underline;
-}
-
-.tool-item span {
-    @media screen and (max-width: 1089px) {
-        position: relative;
-        top: -3px;
-        font-size: 0.55em;
-    }
-}
-
-.workshop-items {
-
-}
-
-.workshop-item {
+.footer-content {
     position: relative;
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
-
-.steam-workshop {
-    min-width: 330px !important;
-    max-width: 330px !important;
-}
-
-.steam-workshop-info-footer-author {
-    width: 59% !important;
-}
-
-.reviews {
-    margin-top: 45px;
-    margin-bottom: 20px;
-}
-
-.review {
-    position: relative;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    width: 254px;
-    height: 367px;
-    background-color: #c0c4c6;
-    color: rgb(100, 100, 100);
-    border-radius: 5px;
-    font-style: italic;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.review:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.review-content {
-    padding: 20px;
-    height: 86%;
-}
-
-.review-footer {
-    position: relative;
-    top: -5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    font-size: 1.5em;
-    background-color: rgb(220, 220, 220);
-}
-
-.review-footer i {
-    color: #48973d;
-}
-
-.dl-ident-top {
-    position: relative;
-    top: 4px;
-}
-
-.fade {
-    transition: opacity 0.65s ease-in;
-}
-
-.fade-in {
-    opacity: 1;
-}
-
-.fade-out {
-    opacity: 0;
-}
-
-.is-centered {
+    width: 100%;
+    top: 2px;
     text-align: center;
 }
 
-.steam-group-padding {
-    @media screen and (min-width: 768px) {
-        padding-left: 55px;
-    }
+.footer-content a {
+    color: rgba(67, 225, 92, 0.76) !important;
 }
 
-.steam-group-margin-top {
-    margin-top: 45px;
+.footer-content a:hover {
+    color: rgba(67, 225, 92, 0.85) !important;
+    text-decoration: underline;
 }

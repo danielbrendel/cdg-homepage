@@ -31,20 +31,20 @@
 	</head>
 	
 	<body>
-		<div id="main">
-			<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+		<div class="app">
+			<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a class="navbar-item navbar-item-brand is-font-title" href="{{ url('/') }}">
 						<img src="{{ asset('img/logo.png') }}" alt="Logo"/>&nbsp;Casual Desktop Game
 					</a>
-
-					<a role="button" class="navbar-burger burger is-top-5" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+			
+					<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
 						<span aria-hidden="true"></span>
 					</a>
 				</div>
-
+			
 				<div id="navbarBasicExample" class="navbar-menu">
 					<div class="navbar-end">
 						<a class="navbar-item" href="{{ url('/') }}">
@@ -91,73 +91,14 @@
 			</nav>
 
 			@if ((isset($show_header)) && ($show_header))
-			<div class="header" style="background-image: url('{{ asset('img/header.png') }}');">
-				<div class="header-inner">
-					<div class="columns">
-						<div class="column is-2"></div>
-
-						<div class="column is-8">
-							<div class="header-content">
-								<div class="header-left">
-									<steam-app appid="1001860" rating="1" author="{{ env('APP_WIDGET_AUTHOR') }}" style-border="small"></steam-app>
-								</div>
-
-								<div class="header-right">
-									<h1 class="is-font-headline">Desktop Destroyer rebirth</h1>
-
-									<hr/>
-
-									<p>
-										Many played the Desktop Destroyer / Stress Reducer back in the days
-										and really loved it. It created so many fond memories in many peoples
-										childhood days. 
-									</p>
-
-									<p>
-										That's why Casual Desktop Game has been created. To bring back the old fun
-										in a new and modern shape - which means downloadable community content and
-										other community features. Thus the game is freely available to download and
-										play via Steam. 
-									</p>
-
-									<p>
-										Casual Desktop Game features AngelScript to create tools/entities.
-									</p>
-
-									<div>
-										<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/downloads-50k+-green" alt="downloads"/></div>
-										<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/price-free-success" alt="price"/></div>
-										<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/rating-4.5/5-blue" alt="rating"/></div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="column is-2"></div>
-					</div>
-				</div>
-			</div>
+				@include('header.php')
 			@endif
 
-			<div class="content">
-				{%content%}
-			</div>
+			{%content%}
 
-			<div class="footer">
-				<div class="columns">
-        			<div class="column is-4"></div>
-
-					<div class="column is-4">
-						<div class="footer-frame">
-							<div class="footer-content">
-								&copy; {{ date('Y') }} by Daniel Brendel | <a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;&nbsp;&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></span>
-							</div>
-						</div>
-					</div>
-
-					<div class="column is-4"></div>
-				</div>
-			</div>
+			<nav class="footer navbar is-fixed-bottom">
+				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></div>
+			</nav>
 		</div>
 
 		<script src="{{ asset('js/app.js') }}"></script>

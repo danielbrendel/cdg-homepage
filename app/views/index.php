@@ -1,101 +1,147 @@
-<div class="columns">
-	<div class="column is-2"></div>
+<div class="content">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-2"></div>
 
-	<div class="column is-8 is-vertical-margin">
-		<div class="content-padding">
-			<a name="content"></a>
+			<div class="column is-10">
+				<h2 class="fade fade-out">Desktop Destroyer rebirth</h2>
 
-			<h2 class="is-font-headline fade fade-out">Welcome to Casual Desktop Game</h2>
-
-			<p class="fade fade-out">
-				Casual Desktop Game is a fanmade remake of the ancient Desktop Destroyer.
-			</p>
-
-			<p class="fade fade-out">
-				The games style is the same like the original game, except that you can download
-				new tools, entities and other stuff from the Steam Workshop.
-			</p> 
-			
-			<p class="fade fade-out">
-				Tools are made by programming them via AngelScript, a popular scripting engine in the game programming
-				universe. 
-			</p>
-
-			<p class="fade fade-out">
-				Become part of the community, play the game on Steam and revive your childhood.
-			</p>
-
-			<p class="fade fade-out">
-				The game is free to play and there are no payable items since we believe that such kind
-				of game must be totally free of charge. 
-			</p>
-
-			<hr/>
-
-			<h2 class="fade fade-out">Casual Desktop Game is a modern product</h2>
-
-			<div class="feature-cards">
-				<div class="feature-card fade fade-out">
-					<div class="feature-card-icon"><i class="fas fa-microchip fa-3x"></i></div>
-					<div class="feature-card-info">x64 platform</div>
+				<div class="fade fade-out is-vertical-spacing">
+					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/downloads-50k+-green" alt="downloads"/></div>
+					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/price-free-success" alt="price"/></div>
+					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/rating-4.5/5-blue" alt="rating"/></div>
 				</div>
 
-				<div class="feature-card fade fade-out">
-					<div class="feature-card-icon"><i class="fas fa-puzzle-piece fa-3x"></i></div>
-					<div class="feature-card-info">Workshop</div>
-				</div>
+				<p class="fade fade-out">
+					Many played the Desktop Destroyer / Stress Reducer back in the days
+					and really loved it. It created so many fond memories in many peoples
+					childhood days. 
+				</p>
 
-				<div class="feature-card fade fade-out">
-					<div class="feature-card-icon"><i class="fas fa-code fa-3x"></i></div>
-					<div class="feature-card-info">Development</div>
-				</div>
+				<p class="fade fade-out">
+					That's why Casual Desktop Game has been created. To bring back the old fun
+					in a new and modern shape - which means downloadable community content and
+					other community features. Thus the game is freely available to download and
+					play via Steam. 
+				</p>
 
-				<div class="feature-card fade fade-out">
-					<div class="feature-card-icon"><i class="fas fa-download fa-3x"></i></div>
-					<div class="feature-card-info">50,000+</div>
-				</div>
+				<p class="fade fade-out">
+					Casual Desktop Game features AngelScript to create tools/entities.
+				</p>
 
-				<div class="feature-card fade fade-out">
-					<div class="feature-card-icon"><i class="fas fa-star fa-3x"></i></div>
-					<div class="feature-card-info">4.5/5 Stars</div>
+				<div class="feature-cards is-fixed-horizont">
+					<div class="feature-card fade fade-out">
+						<div class="feature-card-icon"><i class="fas fa-microchip fa-3x"></i></div>
+						<div class="feature-card-info">x64 platform</div>
+					</div>
+
+					<div class="feature-card fade fade-out">
+						<div class="feature-card-icon"><i class="fas fa-puzzle-piece fa-3x"></i></div>
+						<div class="feature-card-info">Workshop</div>
+					</div>
+
+					<div class="feature-card fade fade-out">
+						<div class="feature-card-icon"><i class="fas fa-code fa-3x"></i></div>
+						<div class="feature-card-info">Development</div>
+					</div>
+
+					<div class="feature-card fade fade-out">
+						<div class="feature-card-icon"><i class="fas fa-download fa-3x"></i></div>
+						<div class="feature-card-info">50,000+</div>
+					</div>
+
+					<div class="feature-card fade fade-out">
+						<div class="feature-card-icon"><i class="fas fa-star fa-3x"></i></div>
+						<div class="feature-card-info">4.5/5 Stars</div>
+					</div>
 				</div>
 			</div>
 
-			<hr/>
-
-			<h2>Why players love the game</h2>
-
-			@if (count($reviews) > 0)
-				<div class="reviews is-centered">
-					@foreach ($reviews as $review)
-						<div class="review fade fade-out">
-							<div class="review-content">
-								&quot;{!! str_replace("\r\n", "<br/>", $review->get('content')) !!}&quot;
-							</div>
-
-							<div class="review-footer">
-								<i class="fas fa-thumbs-up"></i>&nbsp;<a href="{{ $review->get('url') }}">{{ $review->get('type') }}</a>
-							</div>
-						</div>
-					@endforeach
-				</div>
-
-				<hr/>
-			@endif
-
-			<h3 class="fade fade-out">Join the Desktop Destroyer Fan Group:</h3>
-
-			<p class="fade fade-out steam-group-padding steam-group-margin-top">
-				<steam-group group="desktop-destroyer-fan-group" style-border="small"></steam-group>
-			</p>
-
-			<hr/>
-
-			<p class="fade fade-out">
-				If you have any questions, please create a discussion in the <a href="https://steamcommunity.com/app/1001860/discussions/">Steam forums</a>.
-			</p>
+			<div class="column is-2"></div>
 		</div>
 	</div>
+</div>
 
-	<div class="column is-2"></div>
+<a name="downloads" id="downloads-section"></a>
+<div class="downloads">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-2"></div>
+
+			<div class="column is-10 is-fixed-horizont">
+				<h2 class="is-centered fade fade-out">Download</h2>
+
+				<div class="is-centered fade fade-out">
+					<div class="is-vertical-spacing">
+						<iframe src="https://store.steampowered.com/widget/1001860/" frameborder="0" width="646" height="190"></iframe>
+					</div>
+
+					<div class="is-vertical-spacing">
+						<iframe frameborder="0" src="https://itch.io/embed/227301?dark=true" width="552" height="167"><a href="https://danielbrendel.itch.io/casual-desktop-game">Casual Desktop Game by danielbrendel</a></iframe>
+					</div>
+
+					<div class="is-vertical-spacing">
+						<a href="https://www.indiedb.com/games/casual-desktop-game" title="View Casual Desktop Game on Indie DB" target="_blank"><img src="https://button.indiedb.com/rating/medium/games/65487.png" alt="Casual Desktop Game" /></a>
+					</div>
+
+					<div class="is-vertical-spacing">
+						<a class="button is-info" href="https://gamejolt.com/games/casual-desktop-game/785059">Download @ GameJolt</a>
+					</div>
+				</div>
+
+				@if (env('APP_SHOWSTANDALONEDL'))
+				<div class="tbl-downloads">
+					<table class="fade fade-out">
+						<thead>
+							<tr>
+								<td>Type</td>
+								<td>Version</td>
+								<td class="is-centered">Download</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>Portable version</strong></td>
+								<td>Version: {{ env('APP_STANDALONEDLVER') }}</td>
+								<td class="is-centered"><a class="button is-link" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '.zip') }}"><i class="fas fa-download"></i>&nbsp;Download</a></td>
+							</tr>
+
+							<tr>
+								<td><strong>Installer version</strong></td>
+								<td>Version: {{ env('APP_STANDALONEDLVER') }}</td>
+								<td class="is-centered"><a class="button is-link" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '_installer.msi') }}"><i class="fas fa-download"></i>&nbsp;Download</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				@endif
+			</div>
+
+			<div class="column is-2"></div>
+		</div>
+	</div>
+</div>
+
+<div class="screenshots">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-2"></div>
+
+			<div class="column is-10">
+				<h2 class="fade fade-out">Screenshots</h2>
+
+				<p class="fade fade-out is-vertical-spacing">Get a visual impression of the game</p>
+
+				<div class="is-centered-mobile">
+					@for ($i = 1; $i < 7; $i++)
+						<div class="screenshot fade fade-out">
+							<a href="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" target="_blank"><img src="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" alt="Screenshot"/></a>
+						</div>
+					@endfor
+				</div>
+			</div>
+
+			<div class="column is-2"></div>
+		</div>
+	</div>
 </div>
