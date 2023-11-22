@@ -31,7 +31,7 @@
 	</head>
 	
 	<body>
-		<div class="app">
+		<div id="main">
 			<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a class="navbar-item navbar-item-brand is-font-title" href="{{ url('/') }}">
