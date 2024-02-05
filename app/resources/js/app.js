@@ -13,6 +13,8 @@ window.vue = new Vue({
     el: '#main',
 
     data: {
+        bShowPreviewImageModal: false,
+        clsLastImagePreviewAspect: '',
     },
 
     methods: {
@@ -104,12 +106,29 @@ window.vue = new Vue({
             let html = `
                 <div class="screen-item">
                     <div class="screen-item-screenshot">
-                        <a href="` + item + `"><img src="` + item + `" alt="screenshot"></a>
+                        <a href="javascript:void(0);" onclick="window.vue.showImagePreview('` + item + `')"><img src="` + item + `" alt="screenshot"></a>
                     </div>
                 </div>
             `;
 
             return html;
+        },
+
+        showImagePreview: function(asset, aspect = 'is-5by3') {
+            let img = document.getElementById('preview-image-modal-img');
+            if (img) {
+                img.src = asset;
+                img.parentNode.href = asset;
+
+                if (window.vue.clsLastImagePreviewAspect.length > 0) {
+                    img.parentNode.classList.remove(window.vue.clsLastImagePreviewAspect);
+                }
+
+                window.vue.clsLastImagePreviewAspect = aspect;
+                img.parentNode.classList.add(window.vue.clsLastImagePreviewAspect);
+
+                window.vue.bShowPreviewImageModal = true;
+            }
         },
     }
 });

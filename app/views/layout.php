@@ -97,8 +97,22 @@
 			{%content%}
 
 			<nav class="footer navbar is-fixed-bottom">
-				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></div>
+				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></a></div>
 			</nav>
+
+			<div class="modal" :class="{'is-active': bShowPreviewImageModal}">
+				<div class="modal-background"></div>
+
+				<div class="modal-content">
+					<p class="image">
+						<a href="javascript:void(0);" target="_blank">
+							<img id="preview-image-modal-img" alt="image">
+						</a>
+					</p>
+				</div>
+
+				<button class="modal-close is-large" aria-label="close" onclick="window.vue.bShowPreviewImageModal = false;"></button>
+			</div>
 		</div>
 
 		<script src="{{ asset('js/app.js') }}"></script>

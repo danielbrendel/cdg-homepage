@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    color: rgb(67, 225, 92);
+    color: rgb(120, 120, 120);
     font-family: VT323, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
 }
@@ -24,7 +24,7 @@ body {
     font-family: 'Ink Free', 'Shadows Into Light Two', Verdana, Arial, sans-serif;
     font-size: 1.3em;
     font-weight: bold;
-    color: rgb(67, 225, 92) !important;
+    color: rgb(200, 200, 200) !important;
 }
 
 .is-vertical-spacing {
@@ -60,6 +60,10 @@ body {
     }
 }
 
+.is-font-headline {
+    color: rgb(150, 150, 150);
+}
+
 .paragraph {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -81,7 +85,7 @@ body {
 }
 
 .page p {
-    color: rgba(67, 225, 92, 0.5) !important;
+    color: rgb(120, 120, 120) !important;
 }
 
 .page a {
@@ -107,7 +111,7 @@ body {
 }
 
 .page strong {
-    color: rgba(167, 212, 154, 0.76) !important;
+    color: rgb(150, 150, 150) !important;
     font-weight: bold;
 }
 
@@ -130,8 +134,8 @@ body {
 
 .code, pre {
     background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #ddd;
-    border-left: 3px solid rgb(73, 243, 51);
+    border: 1px solid rgb(100, 100, 100);
+    border-left: 3px solid rgb(150, 150, 150);
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
@@ -191,7 +195,7 @@ body {
 }
 
 .navbar-item, .navbar-link {
-    color: rgb(67, 225, 92) !important;
+    color: rgb(150, 150, 150) !important;
 }
 
 .navbar-dropdown {
@@ -243,7 +247,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 .header h1 {
     font-family: VT323, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.4em;
-    color: rgb(67, 225, 92);
+    color: rgb(120, 120, 120);
     background: transparent;
     text-shadow:
         -1px -1px 0 #ccc,
@@ -257,7 +261,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 }
 
 .content {
-    color: rgb(67, 225, 92);
+    color: rgb(120, 120, 120);
     background-color: rgb(30, 30, 30);
     font-size: 1.2em;
     padding-top: 40px !important;
@@ -267,7 +271,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 }
 
 .content h2 {
-    color: rgb(67, 225, 92);
+    color: rgb(150, 150, 150);
 }
 
 .feature-cards {
@@ -292,7 +296,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     background-color: rgb(50, 50, 50);
     color: rgb(120, 120, 120);
     border-radius: 12px;
-    border-left: 3px solid #316d3b;
+    border-left: 3px solid #4d4d4d;
     box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
     font-size: 1.0em;
     text-align: center;
@@ -380,7 +384,7 @@ div.tbl-downloads {
 }
 
 .screenshot img:hover {
-    border: 1px solid rgb(15, 132, 15);
+    border: 1px solid rgb(50, 102, 202);
 }
 
 .news-content {
@@ -410,13 +414,13 @@ div.tbl-downloads {
 }
 
 .news-item-title {
-    color: rgb(67, 225, 92);
+    color: rgb(150, 150, 150);
     font-size: 1.5em;
     margin: 15px;
 }
 
 .news-item-content {
-    color: rgba(67, 225, 92, 0.5);
+    color: rgb(120, 120, 120);
     margin: 15px;
 }
 
@@ -498,7 +502,7 @@ div.tbl-downloads {
 }
 
 .screen-item img:hover {
-    border: 1px solid rgb(15, 132, 15);
+    border: 1px solid rgb(50, 102, 202);
 }
 
 .screen-item-header {
@@ -565,7 +569,7 @@ div.tbl-downloads {
     width: 100%;
     height: 50px;
     padding: 10px;
-    color: rgba(67, 225, 92, 0.76);
+    color: rgb(200, 200, 200);
     background-color: rgb(67, 67, 67);
 }
 
@@ -577,10 +581,10 @@ div.tbl-downloads {
 }
 
 .footer-content a {
-    color: rgba(67, 225, 92, 0.76) !important;
+    color: rgb(200, 200, 200) !important;
 }
 
 .footer-content a:hover {
-    color: rgba(67, 225, 92, 0.85) !important;
+    color: rgb(200, 200, 200) !important;
     text-decoration: underline;
 }
