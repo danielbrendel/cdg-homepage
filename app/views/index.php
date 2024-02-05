@@ -135,7 +135,7 @@
 				<div class="is-centered-mobile">
 					@for ($i = 1; $i < 7; $i++)
 						<div class="screenshot fade fade-out">
-							<a href="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" target="_blank"><img src="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" alt="Screenshot"/></a>
+							<a href="javascript:void(0);" onclick="window.vue.showImagePreview('{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}');"><img src="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" alt="Screenshot"/></a>
 						</div>
 					@endfor
 				</div>
