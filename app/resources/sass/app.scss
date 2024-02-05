@@ -60,6 +60,10 @@ body {
     }
 }
 
+.is-font-headline {
+    color: rgb(150, 150, 150);
+}
+
 .paragraph {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -410,13 +414,13 @@ div.tbl-downloads {
 }
 
 .news-item-title {
-    color: rgb(67, 225, 92);
+    color: rgb(150, 150, 150);
     font-size: 1.5em;
     margin: 15px;
 }
 
 .news-item-content {
-    color: rgba(67, 225, 92, 0.5);
+    color: rgb(120, 120, 120);
     margin: 15px;
 }
 
