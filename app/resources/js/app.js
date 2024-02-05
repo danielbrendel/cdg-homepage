@@ -106,7 +106,7 @@ window.vue = new Vue({
             let html = `
                 <div class="screen-item">
                     <div class="screen-item-screenshot">
-                        <a href="` + item + `"><img src="` + item + `" alt="screenshot"></a>
+                        <a href="javascript:void(0);" onclick="window.vue.showImagePreview('` + item + `')"><img src="` + item + `" alt="screenshot"></a>
                     </div>
                 </div>
             `;
