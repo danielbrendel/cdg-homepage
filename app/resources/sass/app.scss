@@ -387,6 +387,35 @@ div.tbl-downloads {
     border: 1px solid rgb(50, 102, 202);
 }
 
+.donation {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgb(50, 50, 50);
+    font-size: 1.2em;
+    padding-top: 100px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+    margin-bottom: 50px !important;
+}
+
+.donation-transform {
+    @media screen and (min-width: 1089px) {
+        transform: translateX(-5%);
+    }
+}
+
+.donation a {
+    position: relative;
+    top: 20px;
+}
+
+.donation h2 {
+    font-size: 1.75em;
+    margin-bottom: 0.5714em;
+}
+
 .news-content {
     margin-top: 40px;
 }

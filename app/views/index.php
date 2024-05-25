@@ -145,3 +145,25 @@
 		</div>
 	</div>
 </div>
+
+@if (env('APP_ENABLEDONATION'))
+<div class="donation">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-2"></div>
+
+			<div class="column is-10 donation-transform">
+				<h2 class="fade fade-out is-centered">Your support is greatly appreciated</h2>
+
+				<p class="fade fade-out is-centered is-vertical-spacing">Your support helps to continue working on the project and providing the required infrastructure.</p>
+
+				<div class="is-centered">
+					<a href='https://ko-fi.com/C0C7V2ESD' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+				</div>
+			</div>
+
+			<div class="column is-2"></div>
+		</div>
+	</div>
+</div>
+@endif
