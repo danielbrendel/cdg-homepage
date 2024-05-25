@@ -21,8 +21,8 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                 $hashed = md5_file(public_path() . '/img/screenshots/' . $temp_name);
                 
-                $count = static::where('hash', '=', $hashed)->count()->get();
-                if ($count === 0) {
+                $count = static::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash = ?', [$hashed])->first()?->get('count');
+                if ($count == 0) {
                     rename(public_path() . '/img/screenshots/' . $temp_name, public_path() . '/img/screenshots/' . $hashed . '.jpg');
 
                     $user = null;
