@@ -415,6 +415,9 @@ div.tbl-downloads {
     position: relative;
     width: 100%;
     height: 235px;
+    @media screen and (max-width: 430px) {
+        height: 200px;
+    }
     background-repeat: no-repeat;
     background-size: contain;
     border-top-left-radius: 5px;
