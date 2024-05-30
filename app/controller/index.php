@@ -168,7 +168,47 @@ class IndexController extends BaseController {
 	{
 		GameScreenModel::store();
 
-		exit(200);
+		exit(0);
+	}
+
+	/**
+	 * Handles URL: /backgrounds
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\ViewHandler
+	 */
+	public function backgrounds($request)
+	{
+		//Generate and return a view by using the helper
+		return view('layout', array(
+			array('content', 'backgrounds/backgrounds'),
+			array('javascript', 'backgrounds/js')
+		), [
+			'page_title' => 'Backgrounds'
+		]);
+	}
+
+	/**
+	 * Handles URL: /backgrounds/query
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return Asatru\View\JsonHandler
+	 */
+	public function queryBackgrounds($request)
+	{
+		try {
+			$data = BackgroundsModel::queryAssets()->asArray();
+
+            return json([
+				'code' => 200,
+				'data' => $data
+			]);
+		} catch (Exception $e) {
+			return json([
+				'code' => 500,
+				'msg' => $e->getMessage()
+			]);
+		}
 	}
 
 	/**

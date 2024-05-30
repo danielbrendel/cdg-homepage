@@ -26,6 +26,8 @@ return [
     array('/screenshots/query/steam', 'ANY', 'index@querySteamScreenshots'),
     array('/screenshots/query', 'GET', 'index@queryDbScreenshots'),
     array('/cdg/uploadScreenshot', 'POST', 'index@uploadScreenshot'),
+    array('/backgrounds', 'GET', 'index@backgrounds'),
+    array('/backgrounds/query', 'POST', 'index@queryBackgrounds'),
     array('/documentation', 'GET', 'index@documentation'),
     array('/api', 'GET', 'index@api'),
     array('/cronjob/gamescreens/{pw}', 'ANY', 'index@cronjob_gamescreens'),

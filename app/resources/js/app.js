@@ -114,6 +114,30 @@ window.vue = new Vue({
             return html;
         },
 
+        renderBackground: function(item) {
+            let html = `
+                <div class="background-item">
+                    <div class="background-preview" style="background-image: url('` + item.preview + `');"></div>
+
+                    <div class="background-info">
+                        <div class="background-info-name">` + item.name + `</div>
+
+                        <div class="background-info-description">` + (((item.description !== null) && (item.description.length > 0)) ? item.description : 'N/A') + `</div>
+                    </div>
+
+                    <div class="background-download">
+                        <a class="button is-success" href="` + item.asset + `"><i class="fas fa-download"></i>&nbsp;Download</a>
+                    </div>
+
+                    <div class="background-footer">
+                        By <a href="` + item.link + `">` + item.author + `</a>
+                    </div>
+                </div>
+            `;
+
+            return html;
+        },
+
         showImagePreview: function(asset, aspect = 'is-5by3') {
             let img = document.getElementById('preview-image-modal-img');
             if (img) {

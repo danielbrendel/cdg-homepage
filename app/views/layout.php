@@ -67,6 +67,10 @@
 							Screenshots
 						</a>
 
+						<a class="navbar-item" href="{{ url('/backgrounds') }}">
+							Backgrounds
+						</a>
+
 						<div class="navbar-item has-dropdown is-hoverable">
 							<a class="navbar-link">
 								Community
