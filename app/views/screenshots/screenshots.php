@@ -7,8 +7,7 @@
 				<h2 class="is-font-headline">View screenshots</h2>
 
 				<p>
-					Here you can view screenshots which are fetched from the Steam Community.
-					You can sort them by top rated and recently uploaded screenshots.
+					Here you can view screenshots directly fetched from the Steam Community.
 				</p>
 
 				<div class="header-frame is-vertical-spacing">

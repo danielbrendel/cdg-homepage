@@ -2,7 +2,11 @@
     document.addEventListener('DOMContentLoaded', function() {
         window.screensIndex = null;
 
-        document.getElementById('link-steam-screenshots-top').click();
+        @if (isset($_GET['sorting']))
+            document.getElementById('link-steam-screenshots-{{ $_GET['sorting'] }}').click();
+        @else
+            document.getElementById('link-steam-screenshots-top').click();
+        @endif
     });
 
     window.querySteamScreenshots = function(sorting) {
