@@ -27,14 +27,16 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                     $user = null;
 
-                    try {
-                        if ($screenData['steamId']['custom']) {
-                            $user = SteamModule::queryUserByCustomId($screenData['steamId']['id']);
-                        } else {
-                            $user = SteamModule::queryUser($screenData['steamId']['id']);
+                    if (env('APP_PARSESTEAMUSER')) {
+                        try {
+                            if ($screenData['steamId']['custom']) {
+                                $user = SteamModule::queryUserByCustomId($screenData['steamId']['id']);
+                            } else {
+                                $user = SteamModule::queryUser($screenData['steamId']['id']);
+                            }
+                        } catch (Exception $e) {
+                            $user = null;
                         }
-                    } catch (Exception $e) {
-                        $user = null;
                     }
 
                     TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $user);
