@@ -8,10 +8,11 @@ class SteamScreenModel extends \Asatru\Database\Model
     /**
      * Acquire latest Steam screenshot and post to Twitter
      * 
+     * @param array $targets
      * @return void
      * @throws Exception
      */
-    public static function acquireAndPost()
+    public static function acquireAndPost(array $targets = [])
     {
         try {
             $screenData = static::queryLatestScreenshot();
@@ -39,7 +40,15 @@ class SteamScreenModel extends \Asatru\Database\Model
                         }
                     }
 
-                    TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $user);
+                    $status = isset($user->personaname) ? 'Screenshot uploaded by ' . $user->personaname : '';
+                    
+                    if ((isset($targets['twitter'])) && ($targets['twitter'])) {
+                        TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('TWITTERBOT_TAGS'));
+                    }
+
+                    if ((isset($targets['mastodon'])) && ($targets['mastodon'])) {
+                        MastodonModule::postToMastodon(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('MASTODONBOT_TAGS'));
+                    }
 
                     static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$screenData['hash']]);
                 } else {

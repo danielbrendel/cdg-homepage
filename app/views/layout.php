@@ -101,7 +101,7 @@
 			{%content%}
 
 			<nav class="footer navbar is-fixed-bottom">
-				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></a></div>
+				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></a>&nbsp;<a title="Mastodon" href="{{ env('APP_MASTODONPROFILE') }}"><i class="fab fa-mastodon"></i></a></div>
 			</nav>
 
 			<div class="modal" :class="{'is-active': bShowPreviewImageModal}">

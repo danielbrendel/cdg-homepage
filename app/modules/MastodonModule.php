@@ -4,43 +4,68 @@
  * Class MastodonModule
  */
 class MastodonModule {
-    public static function screenshot($asset, $text = '')
+    /**
+     * @param $asset
+     * @param $text
+     * @return void
+     * @throws \Exception
+     */
+    public static function postToMastodon($asset, $text)
     {
         try {
-            $server_instance = env('MASTODON_SERVER_INSTANCE');
-            $client_id = env('MASTODON_CLIENT_KEY');
-            $client_auth = env('MASTODON_CLIENT_AUTH');
-            $client_secret = env('MASTODON_CLIENT_SECRET');
-            $access_token = env('MASTODON_ACCESS_TOKEN');
+            $server_instance = env('MASTODONBOT_SERVER_INSTANCE');
+
+            $response = NetUtilsModule::remoteRequest($server_instance . '/api/v1/apps', [
+                'post' => http_build_query([
+                    'client_name' => env('APP_NAME') . ' Mastodon Bot',
+                    'redirect_uris' => 'urn:ietf:wg:oauth:2.0:oob',
+                    'scopes' => 'read write'
+                ])
+            ]);
+            
+            $app_json = json_decode($response['data']);
+            if (isset($app_json->error)) {
+                throw new \Exception('[api/v1/apps] ' . $app_json->error, $response['info']['http_code']);
+            }
 
             $response =  NetUtilsModule::remoteRequest($server_instance . '/oauth/token', [
-                'post' => [
-                    'grant_type' => 'authorization_code',
-                    'code' => $client_auth,
-                    'client_id' => $client_id,
-                    'client_secret' => $client_secret,
-                    'redirect_uri' => 'urn:ietf:wg:oauth:2.0:oob',
+                'post' => http_build_query([
+                    'grant_type' => 'client_credentials',
+                    'client_id' => $app_json->client_id,
+                    'client_secret' => $app_json->client_secret,
                     'scope' => 'read write'
-                ]
+                ])
             ]);
             
             $token_json = json_decode($response['data']);
-            if (!isset($token_json->access_token)) {
-                throw new \Exception('No access token returned');
+            if (isset($token_json->error)) {
+                throw new \Exception('[oauth/token] ' . $token_json->error, $response['info']['http_code']);
+            }
+
+            $response =  NetUtilsModule::remoteRequest($server_instance . '/api/v1/apps/verify_credentials', [
+                'header' => [
+                    'Authorization: Bearer ' . $token_json->access_token
+                ]
+            ]);
+            
+            $verify_json = json_decode($response['data']);
+            if (isset($verify_json->error)) {
+                throw new \Exception('[api/v1/apps/verify_credentials] ' . $verify_json->error, $response['info']['http_code']);
             }
 
             $response = NetUtilsModule::remoteRequest($server_instance . '/api/v2/media', [
                 'header' => [
-                    'Authorization: Bearer ' . $token_json->access_token
+                    'Authorization: Bearer ' . $token_json->access_token,
+                    'Content-Type: multipart/form-data'
                 ],
                 'post' => [
-                    'file' => new \CURLFile($asset, 'image/jpg', 'image.jpg')
+                    'file' => new \CURLFile($asset)
                 ]
             ]);
-
+            
             $media_json = json_decode($response['data']);
-            if (!isset($media_json->id)) {
-                throw new \Exception('No media ID returned');
+            if (isset($media_json->error)) {
+                throw new \Exception('[api/v2/media] ' . $media_json->error, $response['info']['http_code']);
             }
 
             $response = NetUtilsModule::remoteRequest($server_instance . '/api/v1/statuses', [
@@ -56,8 +81,8 @@ class MastodonModule {
             ]);
 
             $status_json = json_decode($response['data']);
-            if (!isset($status_json->id)) {
-                throw new \Exception('No status ID returned');
+            if (isset($status_json->error)) {
+                throw new \Exception('[api/v1/statuses] ' . $status_json->error, $response['info']['http_code']);
             }
         } catch (\Exception $e) {
             throw $e;
