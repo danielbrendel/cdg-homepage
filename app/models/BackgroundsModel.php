@@ -18,7 +18,7 @@ class BackgroundsModel extends \Asatru\Database\Model {
         try {
             $limit = ($limit > 0) ? 'LIMIT ' . $limit : '';
 
-            return static::raw('SELECT * FROM `' . self::tableName() . '` WHERE active = 1 ' . $limit);
+            return static::raw('SELECT * FROM `' . self::tableName() . '` WHERE active = 1 ORDER BY name ASC ' . $limit);
         } catch (\Exception $e) {
             throw $e;
         }
