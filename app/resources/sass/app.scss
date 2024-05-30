@@ -132,6 +132,22 @@ body {
     font-size: 1.3em;
 }
 
+.page pre {
+    color: rgb(250, 250, 250);
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+pre code.hljs {
+    background-color: rgb(50, 50, 50);
+    color: rgb(150, 150, 150);
+}
+
+.hljs-comment {
+    color: rgb(123, 125, 105) !important;
+}
+
 .code, pre {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgb(100, 100, 100);
@@ -377,6 +393,19 @@ div.tbl-downloads {
     margin-bottom: 0.5714em;
 }
 
+.screenshots-action {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.screenshots-action a {
+    min-width: 300px;
+    @media screen and (min-width: 945px) {
+        left: -53px;
+    }
+}
+
 .screenshot {
     position: relative;
     display: inline-block;
@@ -471,7 +500,6 @@ div.tbl-downloads {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 100px;
-    margin-bottom: 50px !important;
 }
 
 .donation-transform {
@@ -669,25 +697,44 @@ div.tbl-downloads {
 
 .footer {
     position: relative;
+    bottom: 0;
     width: 100%;
-    height: 50px;
-    padding: 10px;
-    color: rgb(200, 200, 200);
+    padding: 20px;
+    @media screen and (min-width: 768px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     background-color: rgb(67, 67, 67);
+    color: rgb(155, 155, 155);
 }
 
-.footer-content {
-    position: relative;
-    width: 100%;
-    top: 2px;
-    text-align: center;
+.footer-margin-bottom-10 {
+    margin-bottom: 10px;
 }
 
-.footer-content a {
-    color: rgb(200, 200, 200) !important;
+.footer-desktop-right {
+    @media screen and (min-width: 768px) {
+        text-align: right;
+    }
 }
 
-.footer-content a:hover {
-    color: rgb(200, 200, 200) !important;
+.footer a {
+    color: rgb(200, 200, 200);
+}
+
+.footer a:hover {
+    color: rgb(200, 200, 200);
     text-decoration: underline;
+}
+
+.footer i {
+    color: rgb(155, 155, 155);
+}
+
+.footer i:hover {
+    color: rgb(200, 200, 200);
+}
+
+.footer span {
+    margin-left: 10px;
 }

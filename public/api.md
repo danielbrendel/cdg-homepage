@@ -292,5 +292,4 @@ You can use all things from
 * AngelScript script array
 * AngelScript script math
 	
-In order to learn how AngelScript generally
-works visit the <a class="is-link" href="https://www.angelcode.com/angelscript/">official AngelScript website</a>.
+In order to learn how AngelScript generally works visit the <a class="is-link" href="https://www.angelcode.com/angelscript/">official AngelScript documentation</a>.

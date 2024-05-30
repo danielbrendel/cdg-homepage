@@ -139,6 +139,10 @@
 						</div>
 					@endfor
 				</div>
+
+				<div class="screenshots-action">
+					<a class="button is-link" href="{{ url('/screenshots') }}">View more</a>
+				</div>
 			</div>
 
 			<div class="column is-2"></div>

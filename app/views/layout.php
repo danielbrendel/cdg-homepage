@@ -100,9 +100,73 @@
 
 			{%content%}
 
-			<nav class="footer navbar is-fixed-bottom">
-				<div class="footer-content">&copy; 2018 - {{ date('Y') }} Daniel Brendel | <a title="Contact" href="mailto:{{ env('APP_CONTACT') }}"><i class="fas fa-envelope"></i></a>&nbsp;<a title="Steam" href="https://store.steampowered.com/app/1001860/Casual_Desktop_Game/"><i class="fab fa-steam"></i></a>&nbsp;<a title="Twitter" href="https://twitter.com/{{ env('APP_TWITTERHANDLE') }}"><i class="fab fa-twitter"></i></a>&nbsp;<a title="Mastodon" href="{{ env('APP_MASTODONPROFILE') }}"><i class="fab fa-mastodon"></i></a></div>
-			</nav>
+			<div class="footer">
+                <div class="columns">
+                    <div class="column is-3"></div>
+
+                    <div class="column is-3">
+                        <div class="footer-margin-bottom-10">&copy; 2018 - {{ date('Y') }} by {{ env('APP_AUTHOR') }}.</div>
+
+                        <div>
+                            Casual Desktop Game is a free indie game developed with retro feelings and nostalgia in mind.
+							
+                            Please <a href="mailto:{{ env('APP_CONTACT') }}">contact our support</a> for any issues or feedback.
+                        </div>
+                    </div>
+
+                    <div class="column is-3 footer-desktop-right">
+						@if (env('LINK_STEAM'))
+                        <span>
+                            <a href="{{ env('LINK_STEAM') }}" target="_blank">
+                                <i class="fab fa-steam fa-2x"></i>
+                            </a>
+                        </span>
+                        @endif
+
+						@if (env('LINK_ITCHIO'))
+                        <span>
+                            <a href="{{ env('LINK_ITCHIO') }}" target="_blank">
+                                <i class="fab fa-itch-io fa-2x"></i>
+                            </a>
+                        </span>
+                        @endif
+
+						@if (env('LINK_TWITTER'))
+                        <span>
+                            <a href="{{ env('LINK_TWITTER') }}" target="_blank">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </span>
+                        @endif
+
+                        @if (env('LINK_MASTODON'))
+                        <span>
+                            <a href="{{ env('LINK_MASTODON') }}" target="_blank">
+                                <i class="fab fa-mastodon fa-2x"></i>
+                            </a>
+                        </span>
+                        @endif
+
+                        @if (env('LINK_INSTAGRAM'))
+                        <span>
+                            <a href="{{ env('LINK_INSTAGRAM') }}" target="_blank">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </span>
+                        @endif
+
+						@if (env('APP_CONTACT'))
+                        <span>
+                            <a href="mailto:{{ env('APP_CONTACT') }}" target="_blank">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </a>
+                        </span>
+						@endif
+                    </div>
+
+                    <div class="column is-3"></div>
+                </div>
+            </div>
 
 			<div class="modal" :class="{'is-active': bShowPreviewImageModal}">
 				<div class="modal-background"></div>
@@ -135,6 +199,8 @@
 
 			document.addEventListener('DOMContentLoaded', function(){
 				window.vue.initNavbar();
+
+				window.hljs.highlightAll();
 
 				window.waitDescLoad = setInterval(window.checkDescLoad, 250);
 
