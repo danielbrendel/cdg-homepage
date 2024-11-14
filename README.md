@@ -1,1 +1,1 @@
-New homepage of Casual Desktop Game
+Homepage of Casual Desktop Game
