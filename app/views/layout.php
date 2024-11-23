@@ -115,45 +115,15 @@
                     </div>
 
                     <div class="column is-3 footer-desktop-right">
-						@if (env('LINK_STEAM'))
-                        <span>
-                            <a href="{{ env('LINK_STEAM') }}" target="_blank">
-                                <i class="fab fa-steam fa-2x"></i>
-                            </a>
-                        </span>
-                        @endif
-
-						@if (env('LINK_ITCHIO'))
-                        <span>
-                            <a href="{{ env('LINK_ITCHIO') }}" target="_blank">
-                                <i class="fab fa-itch-io fa-2x"></i>
-                            </a>
-                        </span>
-                        @endif
-
-						@if (env('LINK_TWITTER'))
-                        <span>
-                            <a href="{{ env('LINK_TWITTER') }}" target="_blank">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                        </span>
-                        @endif
-
-                        @if (env('LINK_MASTODON'))
-                        <span>
-                            <a href="{{ env('LINK_MASTODON') }}" target="_blank">
-                                <i class="fab fa-mastodon fa-2x"></i>
-                            </a>
-                        </span>
-                        @endif
-
-                        @if (env('LINK_INSTAGRAM'))
-                        <span>
-                            <a href="{{ env('LINK_INSTAGRAM') }}" target="_blank">
-                                <i class="fab fa-instagram fa-2x"></i>
-                            </a>
-                        </span>
-                        @endif
+						@foreach (config('socials') as $social)
+							@if ((is_string($social->url)) && (strlen($social->url) > 0))
+							<span>
+								<a href="{{ $social->url }}" target="_blank">
+									<i class="fab fa-{{ $social->descriptor }} fa-2x"></i>
+								</a>
+							</span>
+							@endif
+						@endforeach
 
 						@if (env('APP_CONTACT'))
                         <span>
