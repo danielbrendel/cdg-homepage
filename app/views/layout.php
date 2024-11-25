@@ -10,7 +10,7 @@
 		<meta property="og:title" content="Casual Desktop Game{{ ((isset($page_title)) ? ' - ' . $page_title : '') }}">
 		<meta property="og:description" content="Official homepage of Casual Desktop Game">
 		<meta property="og:url" content="{{ url($_SERVER['REQUEST_URI']) }}">
-		<meta property="og:image" content="{{ asset('img/steam_shop.png') }}">
+		<meta property="og:image" content="{{ asset('img/preview.png') }}">
 		
 		<title>
 			Casual Desktop Game
