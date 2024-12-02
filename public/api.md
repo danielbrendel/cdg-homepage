@@ -3,19 +3,18 @@
 * HostVersion: A 16-bit value containing a version number (high and low)
 * SpriteHandle: A handle to a sprite (64 Bit)
 * SoundHandle: A handle to a sound (64 Bit)
-* DamageValue: Value containing a damage value. 0 till 255 (1 Byte)
+* DamageValue: Value containing a damage value. 0 - 255 (1 Byte)
 
 ## Enums:
 ### DamageType:
 * DAMAGEABLE_NO: Specifies a non-damageable entity
 * DAMAGEABLE_ALL: Specifies an entity that can be damaged by all
 * DAMAGEABLE_NOTSQUAD: Specifies an entity that cannot be damaged by entities with the same name
-
 ### FileSeekWay:
 * SEEKW_BEGIN: Start from the begin of a file
 * SEEKW_CURRENT: Start from current file offset
 * SEEKW_END: Start from the end of a file
-
+	
 ## Callbacks:
 ```angelscript
 //Called for every file object in list
@@ -53,18 +52,27 @@ int vkExit //Virtual key code of the exit button
 ```angelscript
 Color() //Default constructor
 Color(uint8 r, uint8 g, uint8 b, uint8 a) //Construct with default values
+Color=Color //Assign the values of a Color to a different Color
 uint8 R() //Getter for red channel
 uint8 G() //Getter for green channel
 uint8 B() //Getter for blue channel
 uint8 A() //Getter for alpha channel
+void SetR(uint8) //Setter for red channel
+void SetG(uint8) //Setter for green channel
+void SetB(uint8) //Setter for blue channel
+void SetA(uint8) //Setter for alpha channel
 ```
 ### ConColor (Used to define colors when printing to the console):
 ```angelscript
 ConColor() //Default constructor
 ConColor(uint8 r, uint8 g, uint8 b) //Construct with default values
+ConColor=ConColor //Assign the values of a ConColor to a different ConColor
 uint8 R() //Getter for red channel
 uint8 G() //Getter for green channel
 uint8 B() //Getter for blue channel
+void SetR(uint8) //Setter for red channel
+void SetG(uint8) //Setter for green channel
+void SetB(uint8) //Setter for blue channel
 ```
 ### Vector (Screen positions and resolutions are defined as 2D vectors):
 ```angelscript
@@ -208,8 +216,12 @@ void OnDamage(DamageValue dv)
 Model& GetModel()
 //Called for recieving the current position. This is useful if the entity shall move.
 Vector& GetPosition()
+//Can be used to overwrite the current position with the given position
+void SetPosition(const Vector& in)
 //Return the rotation. This is actually not used by the host application, but might be useful to other entities
 float GetRotation()
+//Can be used to overwrite the current rotation with the given rotation
+void SetRotation(float fRotation)
 //Called for querying the damage value for this entity
 DamageValue GetDamageValue()
 //Return a name string here, e.g. the class name or instance name. This is used when DAMAGE_NOTSQUAD is defined as damage-type, but can also be useful to other entities
@@ -261,6 +273,8 @@ FontHandle R_GetDefaultFont()
 SoundHandle S_QuerySound(const string&in szSoundFile)
 //Play a sound with the given volume (1-10)
 bool S_PlaySound(SoundHandle hSound, int32 lVolume)
+//Get the current global volume
+int32 S_GetCurrentVolume()
 //Get the center of the width of the screen
 int Wnd_GetWindowCenterX()
 //Get the center of the height of the screen
@@ -284,6 +298,23 @@ bool Util_ListSprites(const string& in, FuncFileListing @cb)
 bool Util_ListSounds(const string& in, FuncFileListing @cb)
 //Return a random number between the given values
 int Util_Random(int start, int end)
+//Returns the absolute path to the tools directory
+string GetToolsPath()
+//Can be used to check if there are any menus or dialogs opened
+bool HasOpenGameDialog()
+```
+
+## Including script files
+In order to include script files, you can use the #include directive as follows:
+```angelscript
+//Include a script file in the same directory in the context of a tool
+#include "another_script_file.as"
+
+//Include a script file from the .common directory in the context of a tool
+#include "${COMMON}/common_script.as"
+
+//Include a script file from the .common directory as a common script
+#include "another_common_script.as"
 ```
 
 ## AngelScript internals:
