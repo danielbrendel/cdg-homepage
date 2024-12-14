@@ -263,17 +263,23 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 .header-content {
     position: relative;
-    top: 50%;
+    top: 46%;
     transform: translate(-0%, -50%);
     text-align: center;
 }
 
-.header-content iframe.is-video {
-    width: 500px;
-    height: 350px;
+.header-content div:first-child {
+    position: relative;
+    top: 15px;
+}
+
+.header-content img {
+    width: 300px;
+    height: 300px;
 }
 
 .header h1 {
+    position: relative;
     font-family: 'Comic Sans MS', VT323, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.2em;
     color: rgb(120, 120, 120);
@@ -287,6 +293,8 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
         0    1px 0 #000,
         -1px  1px 0 #000,
         -1px  0   0 #000;
+    top: -10px;
+    margin-bottom: 50px;
 }
 
 .content {

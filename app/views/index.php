@@ -25,6 +25,10 @@
 					play via Steam. 
 				</p>
 
+				<p>
+					<iframe class="is-video" src="https://www.youtube.com/embed/oiwwopCnZ7E?si=R2ZSxmDMWDcyHSAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</p>
+
 				<p class="fade fade-out">
 					Casual Desktop Game features AngelScript to create tools/entities.
 				</p>
