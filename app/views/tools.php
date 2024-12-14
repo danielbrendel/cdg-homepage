@@ -25,6 +25,9 @@
                     <h3>Officially included tools</h3>
 
                     <div class="tool-item"><span>&#9679;</span> <a href="#aircraft">Aircraft</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#alienfighter">Alien Fighter</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#aliengiant">Alien Giant</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#alieninfantry">Alien Infantry</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#ballista">Ballista</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#bazooka">Bazooka</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#bee">Bee</a></div>
@@ -34,6 +37,7 @@
                     <div class="tool-item"><span>&#9679;</span> <a href="#colorgun">Colorgun</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#fireworks">Fireworks</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#flamethrower">Flamethrower</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#frogator">Frogator</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#gunner">Gunner</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#hammer">Hammer</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#headcrab">Headcrab</a></div>
@@ -42,11 +46,15 @@
                     <div class="tool-item"><span>&#9679;</span> <a href="#lasergun">Lasergun</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#lasermech">Lasermech</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#meteor">Meteorshower</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#mine">Mine</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#molotov">Molotov</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#mp5">MP5</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#nuke">Nuke</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#pistol">Pistol</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#rlauncher">Rocket launcher</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#satellite">Satellite</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#shotgun">Shotgun</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#sidelaser">Sidelaser</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#sniper">Sniper</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#soldier">Soldier</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#stamp">Stamp</a></div>
@@ -56,19 +64,6 @@
                     <div class="tool-item"><span>&#9679;</span> <a href="#tclight">TC Light</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#teslatower">Teslatower</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#wand">Wand</a></div>
-                </div>
-
-                <div class="paragraph">
-                    <h3>Official Workshop tools</h3>
-
-                    <div class="tool-item"><span>&#9679;</span> <a href="#alienfighter">Alien Fighter</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#aliengiant">Alien Giant</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#alieninfantry">Alien Infantry</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#frogator">Frogator</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#mine">Mine</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#molotov">Molotov</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#shotgun">Shotgun</a></div>
-                    <div class="tool-item"><span>&#9679;</span> <a href="#sidelaser">Sidelaser</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#wolfdragon">Wolfdragon</a></div>
                 </div>
 
@@ -134,6 +129,114 @@
                                 <tr class="tr-colored">
                                     <td><strong>Movable</strong></td>
                                     <td class="td-no">No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="alienfighter"></a>
+                    <div class="paragraph">
+                        <h4>Alien Fighter</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/alienfighter.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The alien fighter is an alien ship combat entity that shoots lasers</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Military</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="aliengiant"></a>
+                    <div class="paragraph">
+                        <h4>Alien Giant</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/aliengiant.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">This alien mother ship should be avoided by weaker entities. It causes massive damage with different weapons.</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Military</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="alieninfantry"></a>
+                    <div class="paragraph">
+                        <h4>Alien Infantry</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/alieninfantry.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">This alien infantry can walk around and shoot rockets at opponents</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Military</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td class="td-yes">Yes</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -469,6 +572,42 @@
                         <hr/>
                     </div>
 
+                    <a name="frogator"></a>
+                    <div class="paragraph">
+                        <h4>Frogator</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/frogator.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The frogator is a frog-like monster mutant that is armed with a trident that emits lightning strikes</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Monster</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
                     <a name="gunner"></a>
                     <div class="paragraph">
                         <h4>Gunner</h4>
@@ -761,6 +900,78 @@
                         <hr/>
                     </div>
 
+                    <a name="mine"></a>
+                    <div class="paragraph">
+                        <h4>Mine</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/mine.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The mine will be activated if an entity comes too close and will then detonate after a few moments</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Weapon</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-yes">Yes</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="molotov"></a>
+                    <div class="paragraph">
+                        <h4>Molotov</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/molotov.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The molotov can be thrown onto the screen and will create damage in a given area</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Weapon</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
                     <a name="mp5"></a>
                     <div class="paragraph">
                         <h4>MP5</h4>
@@ -920,6 +1131,78 @@
                             When triggered a satellite will fly above the position it is pointed to and emit a lightning strike to where
                             the crosshair points to.
                         </p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Weapon</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="shotgun"></a>
+                    <div class="paragraph">
+                        <h4>Shotgun</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/shotgun.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The shotgun is a weapon that fires multiple bullets and causes much damage</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Weapon</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="sidelaser"></a>
+                    <div class="paragraph">
+                        <h4>Sidelaser</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/sidelaser.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">When launched a sidelaser on left and right of the screen moves from up to down and shoots lasers a few times</p>
 
                         <table>
                             <thead>
@@ -1244,294 +1527,6 @@
                         </p>
 
                         <p class="is-vertical-spacing">The wand spawns a magic plasma ball that heads to where the crosshair points to and explodes causing damage</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Weapon</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-no">No</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="alienfighter"></a>
-                    <div class="paragraph">
-                        <h4>Alien Fighter</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/alienfighter.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">The alien fighter is an alien ship combat entity that shoots lasers</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Military</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="aliengiant"></a>
-                    <div class="paragraph">
-                        <h4>Alien Giant</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/aliengiant.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">This alien mother ship should be avoided by weaker entities. It causes massive damage with different weapons.</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Military</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="alieninfantry"></a>
-                    <div class="paragraph">
-                        <h4>Alien Infantry</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/alieninfantry.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">This alien infantry can walk around and shoot rockets at opponents</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Military</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="frogator"></a>
-                    <div class="paragraph">
-                        <h4>Frogator</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/frogator.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">The frogator is a frog-like monster mutant that is armed with a trident that emits lightning strikes</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Monster</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td class="td-no">No</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="mine"></a>
-                    <div class="paragraph">
-                        <h4>Mine</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/mine.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">The mine will be activated if an entity comes too close and will then detonate after a few moments</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Weapon</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-yes">Yes</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td class="td-no">No</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="molotov"></a>
-                    <div class="paragraph">
-                        <h4>Molotov</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/molotov.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">The molotov can be thrown onto the screen and will create damage in a given area</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Weapon</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-no">No</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="shotgun"></a>
-                    <div class="paragraph">
-                        <h4>Shotgun</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/shotgun.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">The shotgun is a weapon that fires multiple bullets and causes much damage</p>
-
-                        <table>
-                            <thead>
-                                <tr></tr>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr-colored">
-                                    <td><strong>Type</strong></td>
-                                    <td>Weapon</td>
-                                </tr>
-
-                                <tr>
-                                    <td><strong>Spawnable</strong></td>
-                                    <td class="td-no">No</td>
-                                </tr>
-
-                                <tr class="tr-colored">
-                                    <td><strong>Movable</strong></td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <hr/>
-                    </div>
-
-                    <a name="sidelaser"></a>
-                    <div class="paragraph">
-                        <h4>Sidelaser</h4>
-
-                        <p class="is-vertical-spacing">
-                            <img src="{{ asset('img/previews/sidelaser.png') }}"/>
-                        </p>
-
-                        <p class="is-vertical-spacing">When launched a sidelaser on left and right of the screen moves from up to down and shoots lasers a few times</p>
 
                         <table>
                             <thead>
