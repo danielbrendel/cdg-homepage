@@ -208,6 +208,13 @@ pre code.hljs {
     margin-left: 20px;
 }
 
+.navbar-item img {
+    max-height: 2.50rem;
+    @media screen and (max-width: 1087px) {
+        max-height: 2.00rem;
+    }
+}
+
 .navbar-item-brand:hover {
     background-color: rgb(50, 50, 50);
 }
