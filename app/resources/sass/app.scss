@@ -198,8 +198,23 @@ pre code.hljs {
     text-decoration: underline;
 }
 
-.navbar-brand {
-    background-color: rgb(50, 50, 50);
+.navbar {
+    background-color: transparent;
+    transition: .3s ease-in-out;
+}
+
+.navbar-no-transition {
+    transition: unset;
+}
+
+.navbar-background-color {
+    background-color: rgb(50, 50, 50) !important;
+}
+
+.navbar-menu {
+    @media screen and (max-width: 1089px) {
+        background-color: rgb(50, 50, 50) !important;
+    }
 }
 
 .navbar-burger {
@@ -210,60 +225,78 @@ pre code.hljs {
 
 .navbar-item img {
     max-height: 2.50rem;
-    @media screen and (max-width: 1087px) {
-        max-height: 2.00rem;
-    }
 }
 
 .navbar-item-brand:hover {
     background-color: rgb(50, 50, 50);
 }
 
-.navbar.is-dark .navbar-brand > a.navbar-item:hover, .navbar.is-dark .navbar-brand > a.navbar-item.is-active, .navbar.is-dark .navbar-brand .navbar-link:hover, .navbar.is-dark .navbar-brand .navbar-link.is-active {
-    background-color: rgb(50, 50, 50);
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+    background-color: rgba(255, 255, 255, 0.0) !important;
+    color: rgb(180, 180, 180) !important;
 }
 
-.navbar-item, .navbar-link {
-    color: rgb(150, 150, 150) !important;
+.navbar-item, .navbar-burger, .navbar-link {
+    color: rgb(190, 190, 190);
+    @media screen and (min-width: 1087px) {
+        font-size: 1.1em;
+    }
+}
+
+.navbar-end .navbar-item {
+
 }
 
 .navbar-dropdown {
     background-color: rgb(50, 50, 50);
-    border-top: unset;
 }
 
-.navbar-menu {
-    background-color: rgb(50, 50, 50);
+.navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
-a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-    background-color: rgb(41, 41, 41);
+@media screen and (max-width: 1087px) {
+    .navbar-menu {
+        background-color: rgb(50, 50, 50);
+    }
 }
 
-.navbar-dropdown a.navbar-item:hover {
-    background-color: rgb(41, 41, 41);
+a.navbar-burger:hover {
+    color: rgb(200, 200, 200);
+}
+
+.navbar-start {
+    @media screen and (min-width: 1088px) {
+        flex-grow: 1;
+        justify-content: center;
+    }
 }
 
 .header {
     position: relative;
+    top: -20px;
     width: 100%;
-    height: 610px;
-    margin-top: 52px;
+    height: 693px;
+    @media screen and (max-width: 768px) {
+        height: 800px;
+    }
     background-color: rgb(50, 103, 172);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(30, 30, 30, 1.0) 90%, rgba(30, 30, 30, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(30, 30, 30, 1.0) 90%, rgba(30, 30, 30, 0) 100%);
 }
 
 .header-overlay {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .header-content {
     position: relative;
-    top: 46%;
+    top: 45%;
     transform: translate(-0%, -50%);
     text-align: center;
 }

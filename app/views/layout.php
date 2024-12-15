@@ -32,10 +32,11 @@
 	
 	<body>
 		<div id="main">
-			<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a class="navbar-item navbar-item-brand is-font-title" href="{{ url('/') }}">
-						<img src="{{ asset('img/titlebar.png') }}" alt="Title"/>
+						<img src="{{ asset('img/logo.png') }}" alt="Logo"/>&nbsp;
+						<img src="{{ asset('img/title.png') }}" alt="Title"/>
 					</a>
 			
 					<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -174,10 +175,18 @@
 
 				window.waitDescLoad = setInterval(window.checkDescLoad, 250);
 
+				document.getElementsByTagName('body')[0].addEventListener('scroll', function() {
+					if ((document.body.scrollTop > document.getElementsByClassName('navbar')[0].offsetHeight + 10) || (document.documentElement.scrollTop > document.getElementsByClassName('navbar')[0].offsetHeight + 10)) {
+						document.getElementsByClassName('navbar')[0].classList.add('navbar-background-color');
+					} else {
+						document.getElementsByClassName('navbar')[0].classList.remove('navbar-background-color');
+					}
+				});
+
 				const obsoptions = {
 					root: null,
 					rootMargin: '0px',
-					threshold: 0.2
+					threshold: 0.7
 				};
 
 				const obscallback = function(entries, observer) {

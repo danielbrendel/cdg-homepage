@@ -34,6 +34,16 @@ window.vue = new Vue({
                         
                         el.classList.toggle('is-active');
                         $target.classList.toggle('is-active');
+
+                        if (el.classList.contains('is-active')) {
+                            let rootel = document.getElementsByClassName('navbar')[0];
+                            rootel.classList.add('navbar-background-color');
+                            rootel.classList.add('navbar-no-transition');
+                        } else {
+                            let rootel = document.getElementsByClassName('navbar')[0];
+                            rootel.classList.remove('navbar-background-color');
+                            rootel.classList.remove('navbar-no-transition');
+                        }
                     });
                 });
             }
