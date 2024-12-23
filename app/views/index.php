@@ -25,9 +25,11 @@
 					play via Steam. 
 				</p>
 
+				@if (env('APP_SHOWCASEVIDEO'))
 				<p>
-					<iframe class="is-video" src="https://www.youtube.com/embed/luwIkvEVUxE?si=T-dP8Zv98uwuoT3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe class="is-video" src="{{ env('APP_SHOWCASEVIDEO') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</p>
+				@endif
 
 				<p class="fade fade-out">
 					Casual Desktop Game features AngelScript to create tools/entities.
