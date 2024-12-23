@@ -106,17 +106,15 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><strong>Portable version</strong></td>
-								<td>Version: {{ env('APP_STANDALONEDLVER') }}</td>
-								<td class="is-centered"><a class="button is-link" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '.zip') }}"><i class="fas fa-download"></i>&nbsp;Download</a></td>
-							</tr>
-
-							<tr>
-								<td><strong>Installer version</strong></td>
-								<td>Version: {{ env('APP_STANDALONEDLVER') }}</td>
-								<td class="is-centered"><a class="button is-link" href="{{ asset('downloads/cdg_v' . env('APP_STANDALONEDLVER') . '_installer.msi') }}"><i class="fas fa-download"></i>&nbsp;Download</a></td>
-							</tr>
+							@foreach (config('downloads') as $download)
+								@if (($download->active) && (file_exists(public_path() . '/' . $download->resource)))
+								<tr>
+									<td><strong>{{ $download->name }}</strong></td>
+									<td>Version: {{ $download->version }}</td>
+									<td class="is-centered"><a class="button is-link" href="{{ asset($download->resource) }}"><i class="fas fa-download"></i>&nbsp;Download</a></td>
+								</tr>
+								@endif
+							@endforeach
 						</tbody>
 					</table>
 				</div>
