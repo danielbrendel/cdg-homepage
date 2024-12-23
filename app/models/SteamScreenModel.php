@@ -42,14 +42,10 @@ class SteamScreenModel extends \Asatru\Database\Model
                         }
 
                         $status = isset($user->personaname) ? 'Screenshot uploaded by ' . $user->personaname : '';
-                        
-                        if ((isset($platforms['twitter'])) && ($platforms['twitter'])) {
-                            TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('TWITTERBOT_TAGS'));
-                        }
 
-                        if ((isset($platforms['mastodon'])) && ($platforms['mastodon'])) {
-                            MastodonModule::postToMastodon(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('MASTODONBOT_TAGS'));
-                        }
+                        $className = ucfirst($pfkey) . 'Module';
+                        $instance = new $className;
+                        $instance->postToFeed(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('APP_POSTTAGS'));
 
                         static::raw('INSERT INTO `' . self::tableName() . '` (hash, platform) VALUES(?, ?)', [$screenData['hash'], $pfkey]);
                     }

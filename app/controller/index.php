@@ -261,59 +261,27 @@ class IndexController extends BaseController {
 			]);
 		}
 	}
-
 	/**
-	 * Handles URL: /cronjob/steamscreens/twitter/{pw}
+	 * Handles URL: /cronjob/steamscreens/{platform}/{token}
 	 * 
 	 * @param Asatru\Controller\ControllerArg $request
 	 * @return Asatru\View\JsonHandler
 	 */
-	public function cronjob_steamscreens_twitter($request)
+	public function cronjob_steamscreens($request)
 	{
 		try {
-			$pw = $request->arg('pw', null);
+			$platform = $request->arg('platform', null);
+			$token = $request->arg('token', null);
 
-			if (!env('TWITTERBOT_ENABLE', false)) {
-                throw new Exception('Twitter Bot is deactivated', 500);
+			if (!env('APP_POSTSCREENS', false)) {
+                throw new Exception('Screenshot Bot is deactivated', 500);
             }
 
-            if ($pw !== env('TWITTERBOT_CRONPW')) {
-                throw new Exception('Password ' . $pw . ' is invalid', 403);
+            if ($token !== env('APP_CRONPW')) {
+                throw new Exception('Password ' . $token . ' is invalid', 403);
             }
 
-			SteamScreenModel::acquireAndPost(['twitter' => true]);
-
-			return json([
-				'code' => 200
-			]);
-		} catch (Exception $e) {
-			return json([
-				'code' => $e->getCode(),
-				'msg' => $e->getMessage()
-			]);
-		}
-	}
-
-	/**
-	 * Handles URL: /cronjob/steamscreens/mastodon/{pw}
-	 * 
-	 * @param Asatru\Controller\ControllerArg $request
-	 * @return Asatru\View\JsonHandler
-	 */
-	public function cronjob_steamscreens_mastodon($request)
-	{
-		try {
-			$pw = $request->arg('pw', null);
-
-			if (!env('MASTODONBOT_ENABLE', false)) {
-                throw new Exception('Mastodon Bot is deactivated', 500);
-            }
-
-            if ($pw !== env('MASTODONBOT_CRONPW')) {
-                throw new Exception('Password ' . $pw . ' is invalid', 403);
-            }
-
-			SteamScreenModel::acquireAndPost(['mastodon' => true]);
+			SteamScreenModel::acquireAndPost([$platform => true]);
 
 			return json([
 				'code' => 200

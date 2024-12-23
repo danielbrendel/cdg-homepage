@@ -10,7 +10,7 @@ class MastodonModule {
      * @return void
      * @throws \Exception
      */
-    public static function postToMastodon($asset, $text)
+    public function postToFeed($asset, $text)
     {
         try {
             $server_instance = env('MASTODONBOT_SERVER_INSTANCE');

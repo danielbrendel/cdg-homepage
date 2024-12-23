@@ -15,7 +15,7 @@ class TwitterModule
      * @return void
      * @throws Exception
      */
-    public static function postToTwitter($asset, $text)
+    public function postToFeed($asset, $text)
     {
         try {
             $connection = new TwitterOAuth(env('TWITTERBOT_APIKEY',), env('TWITTERBOT_APISECRET'), env('TWITTERBOT_ACCESS_TOKEN'), env('TWITTERBOT_ACCESS_TOKEN_SECRET'));  
