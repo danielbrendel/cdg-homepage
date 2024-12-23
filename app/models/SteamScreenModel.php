@@ -8,11 +8,11 @@ class SteamScreenModel extends \Asatru\Database\Model
     /**
      * Acquire latest Steam screenshot and post to Twitter
      * 
-     * @param array $targets
+     * @param array $platforms
      * @return void
      * @throws Exception
      */
-    public static function acquireAndPost(array $targets = [])
+    public static function acquireAndPost(array $platforms = [])
     {
         try {
             $screenData = static::queryLatestScreenshot();
@@ -22,36 +22,40 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                 $hashed = md5_file(public_path() . '/img/screenshots/' . $temp_name);
                 
-                $count = static::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash = ?', [$hashed])->first()?->get('count');
-                if ($count == 0) {
-                    rename(public_path() . '/img/screenshots/' . $temp_name, public_path() . '/img/screenshots/' . $hashed . '.jpg');
+                foreach ($platforms as $pfkey => $platform) {
+                    $count = static::raw('SELECT COUNT(*) AS count FROM `' . self::tableName() . '` WHERE hash = ? AND platform = ?', [$hashed, $pfkey])->first()?->get('count');
+                    if ($count == 0) {
+                        rename(public_path() . '/img/screenshots/' . $temp_name, public_path() . '/img/screenshots/' . $hashed . '.jpg');
 
-                    $user = null;
+                        $user = null;
 
-                    if (env('APP_PARSESTEAMUSER')) {
-                        try {
-                            if ($screenData['steamId']['custom']) {
-                                $user = SteamModule::queryUserByCustomId($screenData['steamId']['id']);
-                            } else {
-                                $user = SteamModule::queryUser($screenData['steamId']['id']);
+                        if (env('APP_PARSESTEAMUSER')) {
+                            try {
+                                if ($screenData['steamId']['custom']) {
+                                    $user = SteamModule::queryUserByCustomId($screenData['steamId']['id']);
+                                } else {
+                                    $user = SteamModule::queryUser($screenData['steamId']['id']);
+                                }
+                            } catch (Exception $e) {
+                                $user = null;
                             }
-                        } catch (Exception $e) {
-                            $user = null;
                         }
-                    }
 
-                    $status = isset($user->personaname) ? 'Screenshot uploaded by ' . $user->personaname : '';
-                    
-                    if ((isset($targets['twitter'])) && ($targets['twitter'])) {
-                        TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('TWITTERBOT_TAGS'));
-                    }
+                        $status = isset($user->personaname) ? 'Screenshot uploaded by ' . $user->personaname : '';
+                        
+                        if ((isset($platforms['twitter'])) && ($platforms['twitter'])) {
+                            TwitterModule::postToTwitter(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('TWITTERBOT_TAGS'));
+                        }
 
-                    if ((isset($targets['mastodon'])) && ($targets['mastodon'])) {
-                        MastodonModule::postToMastodon(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('MASTODONBOT_TAGS'));
-                    }
+                        if ((isset($platforms['mastodon'])) && ($platforms['mastodon'])) {
+                            MastodonModule::postToMastodon(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('MASTODONBOT_TAGS'));
+                        }
 
-                    static::raw('INSERT INTO `' . self::tableName() . '` (hash) VALUES(?)', [$screenData['hash']]);
-                } else {
+                        static::raw('INSERT INTO `' . self::tableName() . '` (hash, platform) VALUES(?, ?)', [$screenData['hash'], $pfkey]);
+                    }
+                }
+
+                if (file_exists(public_path() . '/img/screenshots/' . $temp_name)) {
                     unlink(public_path() . '/img/screenshots/' . $temp_name);
                 }
             }

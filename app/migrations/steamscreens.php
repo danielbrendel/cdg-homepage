@@ -29,6 +29,7 @@ class Steamscreens_Migration {
         $this->database->drop();
         $this->database->add('id INT NOT NULL AUTO_INCREMENT PRIMARY KEY');
         $this->database->add('hash VARCHAR(512) NOT NULL');
+        $this->database->add('platform VARCHAR(512) NOT NULL');
         $this->database->add('created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP');
         $this->database->create();
     }
