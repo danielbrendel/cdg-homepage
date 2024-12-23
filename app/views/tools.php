@@ -504,7 +504,7 @@
                             <img src="{{ asset('img/previews/fireworks.png') }}"/>
                         </p>
 
-                        <p class="is-vertical-spacing">The fireworks tool just spawns some fireworks that explode on the position that is pointed to. It's just a visual tool</p>
+                        <p class="is-vertical-spacing">The fireworks tool spawns various different big explosions that also damage the entities nearby. Also it looks pretty nice.</p>
 
                         <table>
                             <thead>
