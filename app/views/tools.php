@@ -34,6 +34,7 @@
                     <div class="tool-item"><span>&#9679;</span> <a href="#boltwand">Boltwand</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#bomb">Bomb</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#chainsaw">Chainsaw</a></div>
+                    <div class="tool-item"><span>&#9679;</span> <a href="#clustergrenade">Cluster Grenade</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#colorgun">Colorgun</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#fireworks">Fireworks</a></div>
                     <div class="tool-item"><span>&#9679;</span> <a href="#flamethrower">Flamethrower</a></div>
@@ -433,6 +434,42 @@
                         </p>
 
                         <p class="is-vertical-spacing">The chainsaw causes damage to the position it is used to.</p>
+
+                        <table>
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-colored">
+                                    <td><strong>Type</strong></td>
+                                    <td>Weapon</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Spawnable</strong></td>
+                                    <td class="td-no">No</td>
+                                </tr>
+
+                                <tr class="tr-colored">
+                                    <td><strong>Movable</strong></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr/>
+                    </div>
+
+                    <a name="clustergrenade"></a>
+                    <div class="paragraph">
+                        <h4>Cluster Grenade</h4>
+
+                        <p class="is-vertical-spacing">
+                            <img src="{{ asset('img/previews/clustergrenade.png') }}"/>
+                        </p>
+
+                        <p class="is-vertical-spacing">The cluster grenade will cause one main and a few secondary explosions with huge damage.</p>
 
                         <table>
                             <thead>
