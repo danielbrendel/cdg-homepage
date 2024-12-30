@@ -330,6 +330,24 @@ a.navbar-burger:hover {
     margin-bottom: 50px;
 }
 
+.header h2 {
+    position: relative;
+    font-family: 'Comic Sans MS', VT323, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    color: rgb(120, 120, 120);
+    background: transparent;
+    text-shadow:
+        -1px -1px 0 #ccc,
+        0   -1px 0 #ccc,
+        1px -1px 0 #000,
+        1px  0   0 #000,
+        1px  1px 0 #000,
+        0    1px 0 #000,
+        -1px  1px 0 #000,
+        -1px  0   0 #000;
+    top: -40px;
+}
+
 .content {
     color: rgb(120, 120, 120);
     background-color: rgb(30, 30, 30);

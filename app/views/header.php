@@ -7,6 +7,8 @@
 
             <h1>Casual Desktop Game</h1>
 
+            <h2>The Desktop Destroyer Revolution</h2>
+
             <div class="is-vertical-spacing">
                 <a class="button is-info button-long" href="javascript:void(0);" onclick="document.getElementById('downloads-section').scrollIntoView({ behavior: 'smooth' });"><i class="fas fa-download"></i>&nbsp;Download</a>
             </div>
