@@ -32,5 +32,6 @@ return [
     array('/api', 'GET', 'index@api'),
     array('/cronjob/gamescreens/{pw}', 'ANY', 'index@cronjob_gamescreens'),
     array('/cronjob/steamscreens/{platform}/{token}', 'ANY', 'index@cronjob_steamscreens'),
+    array('/sitemap', 'GET', 'index@sitemap'),
     array('$404', 'ANY', 'error404@index')
 ];

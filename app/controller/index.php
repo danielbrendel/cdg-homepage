@@ -293,4 +293,24 @@ class IndexController extends BaseController {
 			]);
 		}
 	}
+
+	/**
+	 * Handles URL: /sitemap
+	 * 
+	 * @param Asatru\Controller\ControllerArg $request
+	 * @return mixed
+	 */
+	public function sitemap($request)
+	{
+		try {
+			$sitemap = SitemapModule::generate();
+
+			header('Content-Type: text/xml');
+			echo $sitemap;
+			
+			exit();
+		} catch (\Exception $e) {
+			return abort(500);
+		}
+	}
 }
