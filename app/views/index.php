@@ -77,20 +77,20 @@
 			<div class="column is-10 is-fixed-horizont">
 				<h2 class="is-centered fade fade-out">Download</h2>
 
-				<div class="is-centered fade fade-out">
-					<div class="is-vertical-spacing">
+				<div class="is-centered">
+					<div class="is-vertical-spacing fade fade-out">
 						<iframe src="https://store.steampowered.com/widget/1001860/" frameborder="0" width="646" height="190"></iframe>
 					</div>
 
-					<div class="is-vertical-spacing">
+					<div class="is-vertical-spacing fade fade-out">
 						<iframe frameborder="0" src="https://itch.io/embed/227301?dark=true" width="552" height="167"><a href="https://danielbrendel.itch.io/casual-desktop-game">Casual Desktop Game by danielbrendel</a></iframe>
 					</div>
 
-					<div class="is-vertical-spacing">
+					<div class="is-vertical-spacing fade fade-out">
 						<a href="https://www.indiedb.com/games/casual-desktop-game" title="View Casual Desktop Game on Indie DB" target="_blank"><img src="https://button.indiedb.com/rating/medium/games/65487.png" alt="Casual Desktop Game" /></a>
 					</div>
 
-					<div class="is-vertical-spacing">
+					<div class="is-vertical-spacing fade fade-out">
 						<a class="button is-info" href="https://gamejolt.com/games/casual-desktop-game/785059">Download @ GameJolt</a>
 					</div>
 				</div>
