@@ -3,22 +3,22 @@
 		<div class="columns">
 			<div class="column is-2"></div>
 
-			<div class="column is-10">
-				<h2 class="fade fade-out">Desktop Destroyer rebirth</h2>
+			<div class="column is-10 is-fixed-horizont">
+				<h2 class="fade fade-out is-centered">Desktop Destroyer rebirth</h2>
 
-				<div class="fade fade-out is-vertical-spacing">
+				<div class="fade fade-out is-vertical-spacing is-centered">
 					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/downloads-50k+-green" alt="downloads"/></div>
 					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/price-free-success" alt="price"/></div>
 					<div class="badge-padding is-inline-block" href="#"><img src="https://img.shields.io/badge/rating-4.5/5-blue" alt="rating"/></div>
 				</div>
 
-				<p class="fade fade-out">
+				<p class="fade fade-out is-centered">
 					Many played the Desktop Destroyer / Stress Reducer back in the days
 					and really loved it. It created so many fond memories in many peoples
 					childhood days. 
 				</p>
 
-				<p class="fade fade-out">
+				<p class="fade fade-out is-centered">
 					That's why Casual Desktop Game has been created. To bring back the old fun
 					in a new and modern shape - which means downloadable community content and
 					other community features. Thus the game is freely available to download and
@@ -26,16 +26,16 @@
 				</p>
 
 				@if (env('APP_SHOWCASEVIDEO'))
-				<p>
+				<p class="is-centered">
 					<iframe class="is-video" src="{{ env('APP_SHOWCASEVIDEO') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</p>
 				@endif
 
-				<p class="fade fade-out">
+				<p class="fade fade-out is-centered">
 					Casual Desktop Game features AngelScript to create tools/entities.
 				</p>
 
-				<div class="feature-cards is-fixed-horizont">
+				<div class="feature-cards is-centered">
 					<div class="feature-card fade fade-out">
 						<div class="feature-card-icon"><i class="fas fa-microchip fa-3x"></i></div>
 						<div class="feature-card-info">x64 platform</div>
@@ -131,12 +131,12 @@
 		<div class="columns">
 			<div class="column is-2"></div>
 
-			<div class="column is-10">
-				<h2 class="fade fade-out">Screenshots</h2>
+			<div class="column is-10 is-fixed-horizont">
+				<h2 class="fade fade-out is-centered">Screenshots</h2>
 
-				<p class="fade fade-out is-vertical-spacing">Get a visual impression of the game</p>
+				<p class="fade fade-out is-vertical-spacing is-centered">Get a visual impression of the game</p>
 
-				<div class="is-centered-mobile">
+				<div class="is-centered-mobile is-centered">
 					@for ($i = 1; $i < 7; $i++)
 						<div class="screenshot fade fade-out">
 							<a href="javascript:void(0);" onclick="window.vue.showImagePreview('{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}');"><img src="{{ asset('img/screenshots/screen' . strval($i) . '.jpg') }}" alt="Screenshot"/></a>
@@ -144,7 +144,7 @@
 					@endfor
 				</div>
 
-				<div class="screenshots-action">
+				<div class="screenshots-action is-centered">
 					<a class="button is-link" href="{{ url('/screenshots') }}">View more</a>
 				</div>
 			</div>
@@ -160,7 +160,7 @@
 		<div class="columns">
 			<div class="column is-2"></div>
 
-			<div class="column is-10 donation-transform">
+			<div class="column is-10 is-fixed-horizont">
 				<h2 class="fade fade-out is-centered">Your support is greatly appreciated</h2>
 
 				<p class="fade fade-out is-centered is-vertical-spacing">Your support helps to continue working on the project and providing the required infrastructure.</p>
