@@ -19,10 +19,5 @@ return [
     [
         'url' => env('LINK_MASTODON'),
         'descriptor' => 'mastodon'
-    ],
-
-    [
-        'url' => env('LINK_INSTAGRAM'),
-        'descriptor' => 'instagram'
     ]
 ];
