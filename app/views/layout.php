@@ -28,6 +28,7 @@
         <script src="{{ asset('js/vue.min.js') }}"></script>
         @endif
 		<script src="{{ asset('js/fontawesome.js') }}"></script>
+		<script src="{{ asset('js/app.js') }}"></script>
 	</head>
 	
 	<body>
@@ -154,7 +155,6 @@
 			</div>
 		</div>
 
-		<script src="{{ asset('js/app.js') }}"></script>
 		<div class="is-hidden">{%javascript%}</div>
 		<script>
 			window.waitDescLoad = null;
