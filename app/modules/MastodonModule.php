@@ -51,4 +51,12 @@ class MastodonModule {
             throw $e;
         }
     }
+
+    /**
+     * @return bool
+     */
+    public function supportsHashtags()
+    {
+        return true;
+    }
 }

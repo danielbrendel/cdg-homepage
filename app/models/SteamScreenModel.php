@@ -45,7 +45,8 @@ class SteamScreenModel extends \Asatru\Database\Model
 
                         $className = ucfirst($pfkey) . 'Module';
                         $instance = new $className;
-                        $instance->postToFeed(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status . "\n\n" . env('APP_POSTTAGS'));
+                        $status = (($instance->supportsHashtags()) ? $status . "\n\n" . env('APP_POSTTAGS') : '');
+                        $instance->postToFeed(public_path() . '/img/screenshots/' . $hashed . '.jpg', $status);
 
                         static::raw('INSERT INTO `' . self::tableName() . '` (hash, platform) VALUES(?, ?)', [$screenData['hash'], $pfkey]);
                     }
